@@ -15,6 +15,7 @@ const teacherAttendance = require("./router/TeacherRouter/teacherAttendance.rout
 const adminRouter = require("./router/AdminRouter/admin.router");
 const adminCourseRouter = require("./router/AdminRouter/admincourse.router");
 const adminAttendanceRouter = require("./router/AdminRouter/adminattendance.router");
+const adminStudentRouter = require("./router/AdminRouter/adminstudent.router");
 
 app.use(express.json());
 app.use(cookieParser());
@@ -42,6 +43,7 @@ app.use("/teacher", teacherAttendance);
 app.use("/admin", adminRouter);
 app.use("/admin", adminCourseRouter);
 app.use("/admin", adminAttendanceRouter);
+app.use("/admin",adminStudentRouter);
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);

@@ -5,14 +5,15 @@ const {
   createCourse,
   updateCourse,
   deleteCourse,
-  viewCourse,viewCourseById
+  viewCourse,
+  viewCourseById,
 } = require("../../controller/AdminController/admincourse.controller");
+const admin = require("../../middleware/admin.middleware");
 
-router.post("/create", verifyToken, createCourse);
-router.put("/update/:id", verifyToken, updateCourse);
-router.delete("/delete/:id", verifyToken, deleteCourse);
-router.get("/view", verifyToken, viewCourse);
-router.get("/view/:id", verifyToken, viewCourseById);
-
+router.post("/create", verifyToken, admin, createCourse);
+router.put("/update/:id", verifyToken, admin, updateCourse);
+router.delete("/delete/:id", verifyToken, admin, deleteCourse);
+router.get("/view", verifyToken, admin, viewCourse);
+router.get("/view/:id", verifyToken, admin, viewCourseById);
 
 module.exports = router;

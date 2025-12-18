@@ -23,7 +23,7 @@ const studentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    Batch: {
+    Batch: { 
       type: String,
       required: true,
     },
