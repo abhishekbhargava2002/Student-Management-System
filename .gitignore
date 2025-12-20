@@ -1,4 +1,5 @@
-.env
-package-lock.json
+# Node modules
 node_modules/
 
+# Environment variables
+.env

@@ -1,9 +1,8 @@
+const teacherRegistration = require("../../model/TeacherModel/teacher.model");
 const bcrypt = require("bcryptjs");
-const { v4: uuidv4 } = require("uuid");
-const studentRegistration = require("../../model/StudentModel/studentregistration.model");
 
-//Student Management
-const viewStudentAll = async (req, res) => {
+//Teacher Management
+const viewTeacherAll = async (req, res) => {
   try {
     const adminId = req.user.userId;
     const role = req.user.role;
@@ -24,11 +23,13 @@ const viewStudentAll = async (req, res) => {
       });
     }
 
-    const find = await studentRegistration.find().select("-_id -Password -__v");
+    const find = await teacherRegistration
+      .find()
+      .select("-_id -password -createdAt -updatedAt -__v");
 
     res.status(200).json({
       status: true,
-      message: "View all student by Admin",
+      message: "View all Teacher by Admin",
       data: find,
     });
   } catch (error) {
@@ -40,7 +41,7 @@ const viewStudentAll = async (req, res) => {
   }
 };
 
-const viewStudentById = async (req, res) => {
+const viewTeacherById = async (req, res) => {
   try {
     const { id } = req.params;
     const adminId = req.user.userId;
@@ -64,9 +65,9 @@ const viewStudentById = async (req, res) => {
       });
     }
 
-    const find = await studentRegistration
+    const find = await teacherRegistration
       .findOne({ _id: id })
-      .select("-_id -Password -__v");
+      .select("-_id -password -createdAt -updatedAt -__v");
     if (!find) {
       return res.status(401).json({
         status: false,
@@ -76,7 +77,7 @@ const viewStudentById = async (req, res) => {
 
     res.status(200).json({
       status: true,
-      message: "View the details of student by Id",
+      message: "View the details of Teacher by Id",
       data: find,
     });
   } catch (error) {
@@ -88,7 +89,7 @@ const viewStudentById = async (req, res) => {
   }
 };
 
-const createStudent = async (req, res) => {
+const createTeacher = async (req, res) => {
   try {
     // SAFE CHECK
     if (!req.user) {
@@ -100,7 +101,7 @@ const createStudent = async (req, res) => {
 
     const adminId = req.user.userId;
     const role = req.user.role;
-    const { Name, Email, PhoneNumber, Password } = req.body;
+    const { name, email, password } = req.body;
 
     // AUTHENTICATION
     if (!adminId) {
@@ -119,7 +120,7 @@ const createStudent = async (req, res) => {
     }
 
     // VALIDATION
-    if (!Name || !Email || !PhoneNumber || !Password) {
+    if (!name || !email || !password) {
       return res.status(400).json({
         status: false,
         message: "All fields are required",
@@ -127,39 +128,29 @@ const createStudent = async (req, res) => {
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(Email)) {
+    if (!emailRegex.test(email)) {
       return res.status(400).json({
         status: false,
         message: "Invalid email format",
       });
     }
 
-    const phoneRegex = /^[6-9]\d{9}$/;
-    if (!phoneRegex.test(PhoneNumber)) {
-      return res.status(400).json({
-        status: false,
-        message: "Phone number must be 10 digits (Indian format)",
-      });
-    }
-
-    if (Password.length < 8) {
+    if (password.length < 8) {
       return res.status(400).json({
         status: false,
         message: "Password must be at least 8 characters",
       });
     }
 
-    const create = await studentRegistration.create({
-      StudentId: uuidv4(),
-      Name,
-      Email,
-      PhoneNumber,
-      Password: await bcrypt.hash(Password, 10),
+    const create = await teacherRegistration.create({
+      name,
+      email,
+      password: await bcrypt.hash(password, 10),
     });
 
     res.status(201).json({
       status: true,
-      message: "New student registered successfully",
+      message: "New Teacher registered successfully",
       data: create,
     });
   } catch (error) {
@@ -171,12 +162,12 @@ const createStudent = async (req, res) => {
   }
 };
 
-const updateStudent = async (req, res) => {
+const updateTeacher = async (req, res) => {
   try {
     const adminId = req.user.userId;
     const role = req.user.role;
     const { id } = req.params;
-    const { Name, Email, PhoneNumber, NewPassword } = req.body;
+    const { name, email, newPassword } = req.body;
     // AUTHENTICATION
     if (!adminId) {
       return res.status(401).json({
@@ -204,31 +195,28 @@ const updateStudent = async (req, res) => {
       });
     }
 
-    const find = await studentRegistration.findOne({ _id: id });
+    const find = await teacherRegistration.findOne({ _id: id });
     if (!find) {
       return res.status(401).json({
         status: false,
         message: "Invalid Id",
       });
     }
-    if (Name) {
-      find.Name = Name;
+    if (name) {
+      find.name = name;
     }
-    if (PhoneNumber) {
-      find.PhoneNumber = PhoneNumber;
+    if (email) {
+      find.email = email;
     }
-    if (Email) {
-      find.Email = Email;
-    }
-    if (NewPassword) {
-      const hashedPassword = await bcrypt.hash(NewPassword, 10);
-      find.Password = hashedPassword;
+    if (newPassword) {
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
+      find.password = hashedPassword;
     }
 
     await find.save();
     res.status(200).json({
       status: true,
-      message: "Update the Student detail by Admin",
+      message: "Update the Teacher detail by Admin",
       data: find,
     });
   } catch (error) {
@@ -240,7 +228,7 @@ const updateStudent = async (req, res) => {
   }
 };
 
-const deleteStudent = async (req, res) => {
+const deleteTeacher = async (req, res) => {
   try {
     const adminId = req.user.userId;
     const role = req.user.role;
@@ -272,7 +260,7 @@ const deleteStudent = async (req, res) => {
       });
     }
 
-    const find = await studentRegistration.findOneAndDelete({ _id: id });
+    const find = await teacherRegistration.findOneAndDelete({ _id: id });
     if (!find) {
       res.status(401).json({
         status: false,
@@ -282,7 +270,7 @@ const deleteStudent = async (req, res) => {
 
     res.status(200).json({
       status: true,
-      message: "Delete the Student by Admin",
+      message: "Delete the Teacher by Admin",
       data: find,
     });
   } catch (error) {
@@ -295,9 +283,9 @@ const deleteStudent = async (req, res) => {
 };
 
 module.exports = {
-  viewStudentAll,
-  viewStudentById,
-  createStudent,
-  updateStudent,
-  deleteStudent,
+  viewTeacherAll,
+  viewTeacherById,
+  createTeacher,
+  updateTeacher,
+  deleteTeacher,
 };
