@@ -1,20 +1,20 @@
 const bcrypt = require("bcryptjs");
 const { v4: uuidv4 } = require("uuid");
-const studentRegistration = require("../../model/StudentModel/student.model");
+const studentRegistration = require("../../model/StudentModel/studentregistration.model");
 const jwt = require("jsonwebtoken");
-  
+
 const registration = async (req, res) => {
-  try { 
-    const { StudentId, Name, Email, PhoneNumber, Password } = req.body;
-    if (!Name || !Email || !PhoneNumber || !Password) {
+  try {
+    const { name, email, phoneNumber, password } = req.body;
+    if (!name || !email || !phoneNumber || !password) { 
       return res.status(400).json({
         status: false,
         message: "All field are required",
-      }); 
-    }  
+      });
+    }
     //Validation of Email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(Email)) {
+    if (!emailRegex.test(email)) {
       return res.status(400).json({
         status: false,
         message: "Invalid email format",
@@ -23,33 +23,33 @@ const registration = async (req, res) => {
 
     // PhoneNumber validation
     const phoneRegex = /^[6-9]\d{9}$/;
-    if (!phoneRegex.test(PhoneNumber)) {
+    if (!phoneRegex.test(phoneNumber)) {
       return res.status(400).json({
         status: false,
         message: "PhoneNumber must be 10(digits) and Indian formate",
       });
     }
-    if (Password.length < 8) {
+    if (password.length < 8) {
       return res.status.json({
         status: false,
         messsage: "Password must be greater then 8(character)",
       });
     }
-
+ 
     // Hash password
-    const hashedPassword = await bcrypt.hash(Password, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
 
     const regist = await studentRegistration.create({
-      StudentId: uuidv4(),
-      Name,
-      Email,
-      PhoneNumber,
-      Password: hashedPassword,
+      studentId: uuidv4(),
+      name,
+      email,
+      phoneNumber,
+      password: hashedPassword,
     });
 
     res.status(200).json({
       status: true,
-      message: "Student Registration Successful",
+      message: "Student Registration",
       data: regist,
     });
   } catch (error) {
@@ -63,8 +63,8 @@ const registration = async (req, res) => {
 
 const login = async function login(req, res) {
   try {
-    const { Email, Password } = req.body;
-    if (!Email || !Password) {
+    const { email, password } = req.body;
+    if (!email || !password) {
       return res.status(400).json({
         status: false,
         message: "Email or Password is required",
@@ -72,13 +72,13 @@ const login = async function login(req, res) {
     }
     //Validation of Email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(Email)) {
+    if (!emailRegex.test(email)) {
       return res.status(400).json({
         status: false,
         message: "Invalid email format",
       });
     }
-    const exist = await studentRegistration.findOne({ Email });
+    const exist = await studentRegistration.findOne({ email });
     if (!exist) {
       return res.status(403).json({
         status: false,
@@ -87,7 +87,7 @@ const login = async function login(req, res) {
     }
     // console.log(exist.Email, " ", exist.Password, " ", Password);
 
-    const isMatch = await bcrypt.compare(Password, exist.Password);
+    const isMatch = await bcrypt.compare(password, exist.password);
 
     if (!isMatch)
       return res.status(400).json({
@@ -97,7 +97,7 @@ const login = async function login(req, res) {
 
     //Token
     const token = jwt.sign(
-      { userId: exist._id, Email: exist.Email },
+      { userId: exist._id, email: exist.email },
       process.env.JWT_SECRET,
       {
         expiresIn: "24h",
@@ -113,7 +113,7 @@ const login = async function login(req, res) {
 
     res.status(200).json({
       status: true,
-      message: "Login successful",
+      message: "Login",
       data: token,
     });
   } catch (error) {
@@ -150,7 +150,7 @@ const logout = async (req, res) => {
       status: true,
       message: "Logout",
     });
-  } catch (error) {
+  } catch (error) { 
     console.log("Error:", error);
     res.status(500).json({
       status: false,

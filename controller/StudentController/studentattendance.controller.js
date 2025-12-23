@@ -1,24 +1,24 @@
 const Attendance = require("../../model/StudentModel/attendanceTable.model");
-const student = require("../../model/StudentModel/student.model");
+const studentCourse = require("../../model/StudentModel/studentcourse.model");
 
-const attend = async (req, res) => {
+const attendanceMark = async (req, res) => {
   try {
     const user = req.user.userId;
     const { attendance } = req.body;
     if (!user) {
-      return res.status.json({ 
+      return res.status.json({
         status: false,
         message: "Authentication header missing",
       });
-    }  
-    if (!attendance) {  
+    }
+    if (!attendance) {
       return res.status(400).json({
         status: false,
         message: "Attendance is required (Present/Absent)",
       });
     }
-    const findstudentcourseId = await student.findOne({
-      StudentReferId: user,
+    const findstudentcourseId = await studentCourse.findOne({
+      studentReferId: user,
     });
 
     // FIX: student not found
@@ -29,7 +29,7 @@ const attend = async (req, res) => {
       });
     }
     const findstudentRegistrationId =
-      findstudentcourseId.StudentReferId.toString();
+      findstudentcourseId.studentReferId.toString();
     if (findstudentRegistrationId !== user) {
       return res.status(403).json({
         status: false,
@@ -64,7 +64,7 @@ const attend = async (req, res) => {
   }
 };
 
-const attendView = async (req, res) => {
+const attendanceView = async (req, res) => {
   try {
     const user = req.user.userId;
     if (!user) {
@@ -80,9 +80,9 @@ const attendView = async (req, res) => {
       });
     }
 
-    const find = await Attendance.findOne({ studentReferId: user })
+    const find = await Attendance.find({ studentReferId: user })
       .populate({ path: "studentReferId", select: "Name" })
-      .populate({ path: "studentCourseId", select: "CourseId CourseName" });
+      .populate({ path: "studentCourseId", select: "courseId courseName department" });
 
     // const studentRefer = req.user.userId;
     // console.log(req.user);
@@ -110,7 +110,7 @@ const attendView = async (req, res) => {
   }
 };
 
-const attendupdate = async (req, res) => {
+const attendanceupdate = async (req, res) => {
   try {
     const user = req.user.userId;
     const { attendance } = req.body;
@@ -149,4 +149,4 @@ const attendupdate = async (req, res) => {
   }
 };
 
-module.exports = { attend, attendView, attendupdate };
+module.exports = { attendanceMark, attendanceView, attendanceupdate };

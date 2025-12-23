@@ -1,25 +1,23 @@
-const Student = require("../../model/StudentModel/student.model");
+const StudentCourse = require("../../model/StudentModel/studentcourse.model");
 
-const createStudent = async (req, res) => {
+const createCourse = async (req, res) => {
   try {
     const exist = req.user.userId;
-    const { StudentReferId, CourseId, CourseName, Batch, Address, DOB } =
+    const { courseId, courseName, department } =
       req.body;
-  
-    if (!CourseId || !CourseName || !Batch || !DOB) { 
+   
+    if (!courseId || !courseName || !department) { 
       return res.status(400).json({
         status: false,
         message: "All field is required",
       });
     }
  
-    const create = await Student.create({
-      StudentReferId: exist,
-      CourseId,
-      CourseName,
-      Batch,
-      Address: { Street: Address.Street, PostCode: Address.PostCode },
-      DOB,
+    const create = await StudentCourse.create({
+      studentReferId: exist,
+      courseId,
+      courseName,
+      department,
     });
 
     res.status(200).json({
@@ -36,25 +34,24 @@ const createStudent = async (req, res) => {
   }
 };
 
-const updateStudent = async (req, res) => {
+const updateCourse = async (req, res) => {
   try {
     const auth = req.user.userId;
-    const { Address, DOB } = req.body;
+    const { department } = req.body;
     if (!auth) {
       return res.status(400).json({
         status: false,
         message: "Authication header missing",
       });
     }
-    const exist = await Student.findOne({ StudentReferId: auth });
+    const exist = await StudentCourse.findOne({ studentReferId: auth });
     if (!exist) {
       return res.status(403).json({
         status: false,
         message: "Student not existing",
       });
     }
-    if (Address) exist.Address = Address;
-    if (DOB) exist.DOB = DOB;
+    if (department) exist.department = department;
 
     await exist.save();
     res.status(200).json({
@@ -71,7 +68,7 @@ const updateStudent = async (req, res) => {
   }
 };
 
-const deleteStudent = async (req, res) => {
+const deleteCourse = async (req, res) => {
   try {
     const auth = req.user.userId;
     if (!auth) {
@@ -80,7 +77,7 @@ const deleteStudent = async (req, res) => {
         message: "Authication header missing",
       });
     }
-    const exist = await Student.findOneAndDelete({ StudentReferId: auth });
+    const exist = await StudentCourse.findOneAndDelete({ studentReferId: auth });
     if (!exist) {
       return res.status(403).json({
         status: false,
@@ -101,7 +98,7 @@ const deleteStudent = async (req, res) => {
   }
 };
 
-const getRecord = async (req, res) => {
+const getCourse = async (req, res) => {
   try {
     const auth = req.user.userId;
     if (!auth) {
@@ -110,8 +107,8 @@ const getRecord = async (req, res) => {
         message: "Authication header missing",
       });
     }
-    const find = await Student.findOne({ StudentReferId: auth }).populate(
-      "StudentReferId"
+    const find = await StudentCourse.findOne({ studentReferId: auth }).populate(
+      "studentReferId"
     );
     if (!find) {
       return res.status(403).json({
@@ -134,8 +131,8 @@ const getRecord = async (req, res) => {
 };
 
 module.exports = {
-  createStudent,
-  updateStudent,
-  deleteStudent,
-  getRecord,
+  createCourse,
+  updateCourse,
+  deleteCourse,
+  getCourse,
 };

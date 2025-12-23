@@ -1,5 +1,5 @@
 const Teacher = require("../../model/TeacherModel/teacher.model");
-const Student = require("../../model/StudentModel/student.model");
+const Student = require("../../model/StudentModel/studentcourse.model");
 const { ObjectId } = require("bson");
 
 //MANAGE COURSES
@@ -40,8 +40,8 @@ const teacherView = async (req, res) => {
 const teacherViewByCourseName = async (req, res) => {
   try {
     const teacher = req.user.userId;
-    const { course } = req.body;
-    if (!course) {
+    const { courseName } = req.body;
+    if (!courseName) {
       return res.status(400).json({
         status: false,
         message: "Course Name is required",
@@ -54,12 +54,12 @@ const teacherViewByCourseName = async (req, res) => {
         message: "UnAuthication",
       });
     }
-    const studentFind = await Student.find({ CourseName: course }).select(
+    const studentFind = await Student.find({ courseName: courseName }).select(
       "-_id -createdAt -updatedAt -__v"
     );
     res.status(200).json({
       status: true,
-      message: `View the detail By CourseName ${course}`,
+      message: `View the detail By CourseName ${courseName}`,
       data: studentFind,
     });
   } catch (error) {
@@ -80,41 +80,29 @@ const teacherCreateByStudent = async (req, res) => {
         message: "Unauthorized",
       });
     }
-    const { CourseId, CourseName, Batch, Address, DOB } = req.body;
-    if (!CourseId || !CourseName || !Batch || !Address || !DOB) {
+    const { courseId, courseName, department } = req.body;
+    if (!courseId || !courseName || !department) {
       return res.status(400).json({
         status: false,
         message: "All field are required",
       });
     }
-    if (CourseId.length !== 5) {
+    if (courseId.length !== 5) {
       return res.status(400).json({
         status: false,
         message: "CourseId must be exactly 5 characters",
       });
     }
 
-    if (!Address.Street || !Address.PostCode) {
-      return res.status(400).json({
-        status: false,
-        message: "Complete address is required",
-      });
-    }
-
     //Create Student Id
     const id = new ObjectId();
-    console.log(id.toHexString());
+    // console.log(id.toHexString());
     const createStudent = await Student.create({
-      StudentReferId: id,
-      TeacherReferId: teacherId,
-      CourseId,
-      CourseName,
-      Batch,
-      Address: {
-        Street: Address.Street,
-        PostCode: Address.PostCode,
-      },
-      DOB,
+      studentReferId: id,
+      teacherReferId: teacherId,
+      courseId,
+      courseName,
+      department,
     });
 
     res.status(200).json({
@@ -134,28 +122,16 @@ const teacherCreateByStudent = async (req, res) => {
 const teacherEditByStudent = async function Edit(req, res) {
   try {
     const teacherId = req.user.userId;
+    const { department } = req.body;
     if (!teacherId) {
-      return res.status(401).json({
+      return res.status(401).json({ 
         status: false,
         message: "Unauthorized",
       });
     }
-    const { DOB, Address } = req.body;
-    const find = await Student.findOne({ StudentReferId: teacherId });
-    if (DOB) {
-      find.DOB = DOB;
-    }
-
-    if (Address) {
-      if (!Address.Street || !Address.PostCode) {
-        return res.status(400).json({
-          status: false,
-          message: "Complete address is required",
-        });
-      } else {
-        find.Address.Street = Address.Street;
-        find.Address.PostCode = Address.PostCode;
-      }
+    const find = await Student.findOne({ teacherReferId: teacherId });
+    if (department) {
+      find.department = department;
     }
 
     await find.save();
@@ -181,7 +157,7 @@ const teacherDeleteByStudent = async (req, res) => {
         message: "Unauthorized",
       });
     }
-    const find = await Student.findOneAndDelete({ StudentReferId: teacherId });
+    const find = await Student.findOneAndDelete({ teacherReferId: teacherId });
     res.status(200).json({
       status: false,
       message: `Delete By Teacher of Id: ${teacherId}`,

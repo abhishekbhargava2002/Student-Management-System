@@ -8,9 +8,9 @@ const studentAttendanceSchema = new mongoose.Schema({
   },
   studentCourseId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "student",
+    ref: "studentcourse",
     required: true,
-  },
+  }, 
   date: {
     type: Date,
     default: Date.now,

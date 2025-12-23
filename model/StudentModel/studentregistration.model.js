@@ -1,25 +1,25 @@
 const mongoose = require("mongoose");
 
 const studentRegistrationSchema = new mongoose.Schema({
-  StudentId: {
+  studentId: {
     type: String,
     required: true,
   },
-  Name: {
+  name: {
     type: String,
     required: true,
   },
-  Email: {
-    type: String,
+  email: {
+    type: String, 
     required: true,
     lowercase: true,
     trim: true,
     match: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   },
-  PhoneNumber: {
+  phoneNumber: {
     type: String,
   },
-  Password: {
+  password: {
     type: String,
     required: true,
   },

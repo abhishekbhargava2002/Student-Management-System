@@ -2,45 +2,33 @@ const mongoose = require("mongoose");
 //StudentCourse
 const studentSchema = new mongoose.Schema(
   {
-    StudentReferId: {
+    studentReferId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "studentRegistration",
       required: true,
     },
-    TeacherReferId: {
+    teacherReferId: { 
       type: mongoose.Schema.Types.ObjectId,
       ref: "teacher",
     },
-    AdminReferId: {
+    adminReferId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "admin",
     },
-    CourseId: {
+    courseId: {
       type: String,
       required: true,
     },
-    CourseName: {
+    courseName: {
       type: String,
       required: true,
     },
-    Batch: { 
+    department: { 
       type: String,
       required: true,
-    },
-    Address: {
-      Street: {
-        type: String,
-      },
-      PostCode: {
-        type: String,
-      },
-    },
-    DOB: {
-      type: String,
-      required: true,
-    },
+    }
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("student", studentSchema);
+module.exports = mongoose.model("studentcourse", studentSchema);

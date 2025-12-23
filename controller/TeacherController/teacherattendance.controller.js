@@ -1,5 +1,6 @@
 const Teacher = require("../../model/TeacherModel/teacher.model");
 const StudentAttendance = require("../../model/StudentModel/attendanceTable.model");
+const StudentCourse = require("../../model/StudentModel/studentcourse.model");
 const { ObjectId } = require("bson");
 
 //MANAGE ATTENDANCE
@@ -137,9 +138,108 @@ const teacherUpdateByAttendance = async (req, res) => {
   }
 };
 
+const teacherDeleteAttendance = async (req, res) => {
+  try {
+    const teacherId = req.user.userId;
+    const { id } = req.params;
+    if (!teacherId) {
+      return res.status(401).json({
+        status: false,
+        message: "Teacher Id not found",
+      });
+    }
+    if (!id) {
+      return res.status(400).json({
+        status: false,
+        message: "Id is required",
+      });
+    }
+
+    const findAttendance = await StudentAttendance.findOneAndDelete({
+      _id: id,
+    });
+    if (!findAttendance) {
+      return res.status(401).json({
+        status: false,
+        message: "Invalid Id",
+      });
+    }
+
+    res.status(200).json({
+      status: true,
+      message: "Teacher delete student attendance",
+      data: findAttendance,
+    });
+  } catch (error) {
+    console.log("Error: ", error);
+    res.status(500).json({
+      status: false,
+      message: "Server Error",
+    });
+  }
+};
+
+const teacherMarksAttendance = async (req, res) => {
+  try {
+    const teacherId = req.user.userId;
+    const { id } = req.params;
+    const { attendancemark } = req.body;
+    if (!teacherId) {
+      return res.status(401).json({
+        status: false,
+        message: "Teacher Id not found",
+      });
+    }
+    if (!id) {
+      return res.status(400).json({
+        status: false,
+        message: "Id is required",
+      });
+    }
+    if (id.length !== 24) {
+      return res.status(400).json({
+        status: false,
+        message: "Id length must be 24(char)",
+      });
+    }
+    // console.log(id);
+    const findcourse = await StudentCourse.findOne({ studentReferId: id });
+    // console.log(findcourse.studentReferId.toString(), " ",findcourse._id.toString());
+    const studentid = id;
+    const courseid = findcourse._id.toString();
+    // console.log(studentid + " " + courseid);
+    if (!findcourse) {
+      return res.status(401).json({
+        status: false,
+        message: "Student ReferId is not found",
+      });
+    }
+
+    const createattendance = await StudentAttendance.create({
+      studentReferId: studentid,
+      studentCourseId: courseid,
+      attendance: attendancemark,
+    });
+
+    res.status(200).json({
+      status: true,
+      message: "Attendance Marks By Teacher",
+      data: createattendance,
+    });
+  } catch (error) {
+    console.log("Error: ", error);
+    res.status(500).json({
+      status: false,
+      message: "Server Error",
+    });
+  }
+};
+
 module.exports = {
   teacherViewAttend,
   teacherViewByAttendance,
   teacherViewAttendById,
   teacherUpdateByAttendance,
+  teacherDeleteAttendance,
+  teacherMarksAttendance,
 };

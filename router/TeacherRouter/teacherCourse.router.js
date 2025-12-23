@@ -10,9 +10,10 @@ const {
 } = require("../../controller/TeacherController/teacherCourse.constroller");
 
 router.get("/viewcourse", verifyToken, teacherView);
-router.get("/viewcourse/bycoursename", verifyToken, teacherViewByCourseName);
-router.post("/viewcourse/createstudent", verifyToken, teacherCreateByStudent);
-router.put("/viewcourse/editstudent", verifyToken, teacherEditByStudent);
-router.delete("/viewcourse/deletestudent", verifyToken, teacherDeleteByStudent);
+router.get("/viewcoursename", verifyToken, teacherViewByCourseName);
+router.post("/createcourse", verifyToken, teacherCreateByStudent);
+router.put("/editcourse", verifyToken, teacherEditByStudent);
+router.delete("/deletecourse", verifyToken, teacherDeleteByStudent);
 
 module.exports = router;
+ 

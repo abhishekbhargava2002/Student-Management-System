@@ -5,7 +5,7 @@ const { ObjectId } = require("bson");
 
 const teacherregistration = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password } = req.body; 
     if (!name || !email || !password) {
       return res.status(400).json({
         status: false,
@@ -77,7 +77,7 @@ const teacherLogin = async (req, res) => {
 
     const isMatch = await bcrypt.compare(password, find.password);
     if (!isMatch)
-      return res.status(400).json({
+      return res.status(401).json({
         status: false,
         message: "Invalid Password! Try again",
       });

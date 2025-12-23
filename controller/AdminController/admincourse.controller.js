@@ -1,4 +1,4 @@
-const StudentCourse = require("../../model/StudentModel/student.model");
+const StudentCourse = require("../../model/StudentModel/studentcourse.model");
 const Admin = require("../../model/AdminModel/admin.model");
 const AdminNotification = require("../../model/AdminModel/adminnotification.model");
 const { ObjectId } = require("bson");
@@ -7,41 +7,41 @@ const { ObjectId } = require("bson");
 const createCourse = async (req, res) => {
   try {
     const adminId = req.user.userId;
+    const role = req.user.role;
     if (!adminId) {
       return res.status(400).json({
         status: false,
         message: "Cookies missing",
       });
     }
-    const { CourseId, CourseName, Batch, Address, DOB } = req.body;
-    if (!CourseId || !CourseName || !Batch || !Address || !DOB) {
+    if(role !== "admin") {
+      return res.status(401).json({
+        status: false,
+        message: "Admin access only"
+      })
+    }
+    const { courseId, courseName, department } = req.body;
+    if (!courseId || !courseName || !department ) {
       return res.status(400).json({
         status: false,
         message: "All field are required",
       });
     }
-    if (CourseId.length !== 5) {
+    if (courseId.length !== 5) {
       return res.status(400).json({
         status: false,
         message: "CourseId must be exactly 5 characters",
       });
     }
-    if (!Address.Street || !Address.PostCode) {
-      return res.status(400).json({
-        status: false,
-        message: "Complete address is required",
-      });
-    }
+   
     //Create Student Id
     const id = new ObjectId();
     const createAdmin = await StudentCourse.create({
-      StudentReferId: id,
-      AdminReferId: adminId,
-      CourseId,
-      CourseName,
-      Batch,
-      Address,
-      DOB,
+      studentReferId: id,
+      adminReferId: adminId,
+      courseId,
+      courseName,
+      department,
     });
     await AdminNotification.create({
       adminReferId: adminId,
@@ -78,22 +78,11 @@ const updateCourse = async (req, res) => {
         message: "Id is required",
       });
     }
-    const { Address, DOB } = req.body;
+    const { department } = req.body;
     const studentfind = await StudentCourse.findOne({ _id: id });
 
-    if (Address) {
-      if (!Address.Street || !Address.PostCode) {
-        return res.status(400).json({
-          status: false,
-          message: "Complete address is required",
-        });
-      } else {
-        studentfind.Address.Street = Address.Street;
-        studentfind.Address.PostCode = Address.PostCode;
-      }
-    }
-    if (DOB) {
-      studentfind.DOB = DOB;
+    if (department) {
+      studentfind.department = department;
     }
     await studentfind.save();
 
@@ -133,6 +122,12 @@ const deleteCourse = async (req, res) => {
       });
     }
     const studentfind = await StudentCourse.findOneAndDelete({ _id: id });
+    if(!studentfind) {
+      return res.status(401).json({
+        status: false,
+        message: "Invalid Id",
+      })
+    }
 
     await AdminNotification.create({
       adminReferId: adminId,

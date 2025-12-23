@@ -6,8 +6,8 @@ const port = 3000;
 const home = require("./router/home.router");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
-const studentRouter = require("./router/StudentRouter/student.router");
 const studentRegistration = require("./router/StudentRouter/registration.router");
+const studentCourseRouter = require("./router/StudentRouter/studentcourse.router");
 const studentAttendance = require("./router/StudentRouter/studentattendance.router");
 const teacher = require("./router/TeacherRouter/teacher.router");
 const teacherCourse = require("./router/TeacherRouter/teacherCourse.router");
@@ -35,8 +35,8 @@ async function main() {
 
 //Router's
 app.use("/", home);
-app.use("/student", studentRouter);
 app.use("/student", studentRegistration);
+app.use("/student", studentCourseRouter);
 app.use("/student", studentAttendance);
 app.use("/teacher", teacher);
 app.use("/teacher", teacherCourse);
