@@ -24,7 +24,7 @@ const viewStudentAll = async (req, res) => {
       });
     }
 
-    const find = await studentRegistration.find().select("-_id -Password -__v");
+    const find = await studentRegistration.find().select("-_id -password -__v");
 
     res.status(200).json({
       status: true,
@@ -66,7 +66,7 @@ const viewStudentById = async (req, res) => {
 
     const find = await studentRegistration
       .findOne({ _id: id })
-      .select("-_id -Password -__v");
+      .select("-_id -password -__v");
     if (!find) {
       return res.status(401).json({
         status: false,
@@ -100,7 +100,7 @@ const createStudent = async (req, res) => {
 
     const adminId = req.user.userId;
     const role = req.user.role;
-    const { Name, Email, PhoneNumber, Password } = req.body;
+    const { name, email, phoneNumber, password } = req.body;
 
     // AUTHENTICATION
     if (!adminId) {
@@ -119,7 +119,7 @@ const createStudent = async (req, res) => {
     }
 
     // VALIDATION
-    if (!Name || !Email || !PhoneNumber || !Password) {
+    if (!name || !email || !phoneNumber || !password) {
       return res.status(400).json({
         status: false,
         message: "All fields are required",
@@ -127,7 +127,7 @@ const createStudent = async (req, res) => {
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(Email)) {
+    if (!emailRegex.test(email)) {
       return res.status(400).json({
         status: false,
         message: "Invalid email format",
@@ -135,14 +135,14 @@ const createStudent = async (req, res) => {
     }
 
     const phoneRegex = /^[6-9]\d{9}$/;
-    if (!phoneRegex.test(PhoneNumber)) {
+    if (!phoneRegex.test(phoneNumber)) {
       return res.status(400).json({
         status: false,
         message: "Phone number must be 10 digits (Indian format)",
       });
     }
 
-    if (Password.length < 8) {
+    if (password.length < 8) {
       return res.status(400).json({
         status: false,
         message: "Password must be at least 8 characters",
@@ -150,11 +150,11 @@ const createStudent = async (req, res) => {
     }
 
     const create = await studentRegistration.create({
-      StudentId: uuidv4(),
-      Name,
-      Email,
-      PhoneNumber,
-      Password: await bcrypt.hash(Password, 10),
+      studentId: uuidv4(),
+      name,
+      email,
+      phoneNumber,
+      password: await bcrypt.hash(password, 10),
     });
 
     res.status(201).json({
@@ -176,7 +176,7 @@ const updateStudent = async (req, res) => {
     const adminId = req.user.userId;
     const role = req.user.role;
     const { id } = req.params;
-    const { Name, Email, PhoneNumber, NewPassword } = req.body;
+    const { name, email, phoneNumber, newPassword } = req.body;
     // AUTHENTICATION
     if (!adminId) {
       return res.status(401).json({
@@ -197,32 +197,31 @@ const updateStudent = async (req, res) => {
         message: "Id is required",
       });
     }
-    if (id.length !== 24) {
-      return res.status(400).json({
+    const find = await studentRegistration.findOne({ studentId: id });
+    if (!find) {
+      return res.status(401).json({
         status: false,
-        message: "Id length must be 24(charactior)",
+        message: "StudentId not found",
       });
     }
-
-    const find = await studentRegistration.findOne({ _id: id });
     if (!find) {
       return res.status(401).json({
         status: false,
         message: "Invalid Id",
       });
     }
-    if (Name) {
-      find.Name = Name;
+    if (name) {
+      find.name = name;
     }
-    if (PhoneNumber) {
-      find.PhoneNumber = PhoneNumber;
+    if (phoneNumber) {
+      find.phoneNumber = phoneNumber;
     }
-    if (Email) {
-      find.Email = Email;
+    if (email) {
+      find.email = email;
     }
-    if (NewPassword) {
-      const hashedPassword = await bcrypt.hash(NewPassword, 10);
-      find.Password = hashedPassword;
+    if (newPassword) {
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
+      find.password = hashedPassword;
     }
 
     await find.save();
@@ -265,14 +264,8 @@ const deleteStudent = async (req, res) => {
         message: "Id is required",
       });
     }
-    if (id.length !== 24) {
-      return res.status(400).json({
-        status: false,
-        message: "Id length must be 24(charactior)",
-      });
-    }
 
-    const find = await studentRegistration.findOneAndDelete({ _id: id });
+    const find = await studentRegistration.findOneAndDelete({ studentId: id });
     if (!find) {
       res.status(401).json({
         status: false,

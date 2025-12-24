@@ -1,5 +1,4 @@
 const StudentCourse = require("../../model/StudentModel/studentcourse.model");
-const Admin = require("../../model/AdminModel/admin.model");
 const AdminNotification = require("../../model/AdminModel/adminnotification.model");
 const { ObjectId } = require("bson");
 
