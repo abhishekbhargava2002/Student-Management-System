@@ -1,5 +1,6 @@
 const AdminNotification = require("../../model/AdminModel/adminnotification.model");
 const StudentAttendance = require("../../model/StudentModel/attendanceTable.model");
+const StudentCourse = require("../../model/StudentModel/studentcourse.model");
 //MANAGE ATTENDANCE
 
 const viewattendance = async (req, res) => {
@@ -71,7 +72,7 @@ const viewAttendanceById = async (req, res) => {
     if (role !== "admin") {
       return res.status(401).json({
         status: false,
-        message: "Admin not found",
+        message: "Admin only access",
       });
     }
     if (!id) {
@@ -80,9 +81,9 @@ const viewAttendanceById = async (req, res) => {
         message: "Id is required",
       });
     }
-    const find = await StudentAttendance.findOne({ _id: id }).populate({
+    const find = await StudentAttendance.find({ studentReferId: id }).populate({
       path: "studentCourseId",
-      select: "-Address -_id -StudentReferId -createdAt -updatedAt -__v",
+      select: "-Address -_id -studentReferId -createdAt -updatedAt -__v",
     });
 
     await AdminNotification.create({
@@ -106,7 +107,6 @@ const viewAttendanceById = async (req, res) => {
 const viewAttendanceAllStudentAttendance = async (req, res) => {
   try {
     const role = req.user.role;
-
     const adminId = req.user.userId;
     if (!adminId) {
       return res.status(401).json({
@@ -121,8 +121,13 @@ const viewAttendanceAllStudentAttendance = async (req, res) => {
       });
     }
 
-    const find = await StudentAttendance.find().populate("studentCourseId");
-
+    const find = await StudentAttendance.find({}).populate("studentReferId");
+    if (!find) {
+      return res.status(401).json({
+        status: false,
+        message: "Not existing",
+      });
+    }
     await AdminNotification.create({
       adminReferId: adminId,
       message: `Admin view the detail of all student`,
@@ -144,8 +149,9 @@ const viewAttendanceAllStudentAttendance = async (req, res) => {
 const createAttendance = async (req, res) => {
   try {
     const role = req.user.role;
-    const { studentId, courseId, attend } = req.body;
+    const { attendancemark } = req.body;
     const adminId = req.user.userId;
+    const { id } = req.params;
     if (!adminId) {
       return res.status(401).json({
         status: false,
@@ -158,18 +164,21 @@ const createAttendance = async (req, res) => {
         message: "Admin not found",
       });
     }
-    if (!attend) {
+    if (!attendancemark) {
       return res.status(401).json({
         status: false,
         message: "Attendance is required",
       });
     }
+    const findstudent = await StudentCourse.findOne({ studentReferId: id });
+    const studentId = findstudent.studentReferId.toString();
+    const courseId = findstudent._id.toString();
 
-    // console.log(studentId,"  ",courseId);
+    console.log(studentId, "  ", courseId);
     const create = await StudentAttendance.create({
       studentReferId: studentId,
       studentCourseId: courseId,
-      attendance: attend,
+      attendance: attendancemark,
     });
 
     await AdminNotification.create({
@@ -282,6 +291,51 @@ const deleteAttendance = async (req, res) => {
   }
 };
 
+const deleteAttendanceByStudent = async (req, res) => {
+  try {
+    const role = req.user.role;
+    const { id } = req.params;
+    const adminId = req.user.userId;
+    if (!adminId) {
+      return res.status(401).json({
+        status: false,
+        message: "Admin not found",
+      });
+    }
+    if (role !== "admin") {
+      return res.status(401).json({
+        status: false,
+        message: "Admin not found",
+      });
+    }
+    if (!id) {
+      return res.status(400).json({
+        status: false,
+        message: "Id is required",
+      });
+    }
+    const findstudent = await StudentAttendance.findOneAndDelete({ studentReferId: id });
+    if(!findstudent) {
+      return res.status(401).json({
+        status: false,
+        message: "Student Id not found",
+      })
+    }
+
+    res.status(200).json({
+      status: true,
+      message: "Delete the Attendance record of all in store database",
+      data: findstudent,
+    });
+  } catch (error) {
+    console.log("Error: ", error);
+    res.status(500).json({
+      status: false,
+      message: "Server Error",
+    });
+  }
+};
+
 module.exports = {
   viewattendance,
   viewAttendanceById,
@@ -289,4 +343,5 @@ module.exports = {
   createAttendance,
   updateAttendance,
   deleteAttendance,
+  deleteAttendanceByStudent,
 };

@@ -10,10 +10,10 @@ const {
 const admin = require("../../middleware/admin.middleware");
 const { verifyToken } = require("../../middleware/authcookies.middleware");
 
-router.get("/student", verifyToken, admin, viewStudentAll);
-router.get("/student/:id", verifyToken, admin, viewStudentById);
+router.get("/student", verifyToken, admin, viewStudentAll); //AllStudentFind
+router.get("/student/:id", verifyToken, admin, viewStudentById); //StudentFindById
 router.post("/student/create", verifyToken, admin, createStudent);
-router.put("/student/update/:id", verifyToken, admin, updateStudent);
-router.delete("/student/delete/:id", verifyToken, admin, deleteStudent);
+router.put("/student/update/:id", verifyToken, admin, updateStudent); //UpdateByStudentId
+router.delete("/student/delete/:id", verifyToken, admin, deleteStudent); //deleteByStudentId
 
 module.exports = router;
