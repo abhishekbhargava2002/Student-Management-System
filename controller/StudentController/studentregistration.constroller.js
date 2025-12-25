@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const registration = async (req, res) => {
   try {
     const { name, email, phoneNumber, password } = req.body;
-    if (!name || !email || !phoneNumber || !password) { 
+    if (!name || !email || !phoneNumber || !password) {
       return res.status(400).json({
         status: false,
         message: "All field are required",
@@ -35,7 +35,7 @@ const registration = async (req, res) => {
         messsage: "Password must be greater then 8(character)",
       });
     }
- 
+
     // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -150,7 +150,7 @@ const logout = async (req, res) => {
       status: true,
       message: "Logout",
     });
-  } catch (error) { 
+  } catch (error) {
     console.log("Error:", error);
     res.status(500).json({
       status: false,
