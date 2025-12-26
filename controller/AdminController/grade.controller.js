@@ -1,4 +1,5 @@
 const Grade = require("../../model/StudentModel/grade.model");
+const AdminMessage = require("../../model/AdminModel/adminnotification.model");
 
 const adminViewGrade = async (req, res) => {
   try {
@@ -17,6 +18,11 @@ const adminViewGrade = async (req, res) => {
       });
     }
     const findAdmin = await Grade.find();
+
+    await AdminMessage.create({
+      adminReferId: adminId,
+      message: "Admin view the Grade",
+    });
 
     res.status(200).json({
       status: true,
@@ -58,6 +64,11 @@ const adminViewGradeById = async (req, res) => {
     const findGrade = await Grade.findOne({ gradeId: id }).select(
       "-_id -createdAt -updatedAt -__v"
     );
+
+    await AdminMessage.create({
+      adminReferId: adminId,
+      message: `Admin view the GradeId: ${id}`,
+    });
     res.status(200).json({
       status: true,
       message: `Admin view by GradeId: ${id}`,
