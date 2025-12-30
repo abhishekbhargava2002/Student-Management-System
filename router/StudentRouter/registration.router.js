@@ -6,12 +6,18 @@ const {
   registration,
   login,
   profile,
+  forgotPassword,
+  verifyOtp,
+  resetPassword,
   logout,
 } = require("../../controller/StudentController/studentregistration.constroller");
 
 router.post("/registration", registration);
 router.post("/login", login);
 router.get("/profile", verifyToken, profile);
+router.post("/send-otp", verifyToken, forgotPassword);
+router.post("/vertify-otp", verifyToken, verifyOtp); 
+router.post("/resetpassword", verifyToken, resetPassword); 
 router.post("/logout", verifyToken, logout);
 
-module.exports = router; 
+module.exports = router;

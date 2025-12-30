@@ -10,7 +10,7 @@ const studentRegistrationSchema = new mongoose.Schema({
     required: true,
   },
   email: {
-    type: String, 
+    type: String,
     required: true,
     lowercase: true,
     trim: true,
@@ -22,6 +22,12 @@ const studentRegistrationSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+  },
+  otp: {
+    type: String,
+  },
+  otpExpire: {
+    type: Number,
   },
 });
 
