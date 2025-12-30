@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const studentRegistrationSchema = new mongoose.Schema({
+  image: {
+    type: String,
+  },
   studentId: {
     type: String,
     required: true,
