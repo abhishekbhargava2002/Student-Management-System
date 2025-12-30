@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { work } = require("../controller/home.controller");
+const upload = require("../utils/multerCloudinary");
+const { verifyToken } = require("../middleware/authcookies.middleware");
+const { work, uploadfile } = require("../controller/home.controller");
 
 router.get("/work", work);
+router.post("/upload", upload.single("image"), verifyToken, uploadfile);
 
 module.exports = router;
