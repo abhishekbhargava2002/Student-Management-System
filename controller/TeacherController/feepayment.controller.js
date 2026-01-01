@@ -1,5 +1,4 @@
 const FeePayment = require("../../model/StudentModel/feepayment.model");
-const studentRegistration = require("../../model/StudentModel/studentregistration.model");
 
 const viewfeepayment = async (req, res) => {
   try {
