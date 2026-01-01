@@ -13,14 +13,14 @@ const createCourse = async (req, res) => {
         message: "Cookies missing",
       });
     }
-    if(role !== "admin") {
+    if (role !== "admin") {
       return res.status(401).json({
         status: false,
-        message: "Admin access only"
-      })
+        message: "Admin access only",
+      });
     }
     const { courseId, courseName, department } = req.body;
-    if (!courseId || !courseName || !department ) {
+    if (!courseId || !courseName || !department) {
       return res.status(400).json({
         status: false,
         message: "All field are required",
@@ -32,7 +32,7 @@ const createCourse = async (req, res) => {
         message: "CourseId must be exactly 5 characters",
       });
     }
-   
+
     //Create Student Id
     const id = new ObjectId();
     const createAdmin = await StudentCourse.create({
@@ -121,11 +121,11 @@ const deleteCourse = async (req, res) => {
       });
     }
     const studentfind = await StudentCourse.findOneAndDelete({ _id: id });
-    if(!studentfind) {
+    if (!studentfind) {
       return res.status(401).json({
         status: false,
         message: "Invalid Id",
-      })
+      });
     }
 
     await AdminNotification.create({
@@ -150,10 +150,17 @@ const deleteCourse = async (req, res) => {
 const viewCourse = async (req, res) => {
   try {
     const adminId = req.user.userId;
+    const role = req.user.role;
     if (!adminId) {
       return res.status(401).json({
         status: false,
         message: "Cookies missing",
+      });
+    }
+    if (role !== "admin") {
+      return res.status(403).json({
+        status: false,
+        message: "Admin access only",
       });
     }
     const viewCourse = await StudentCourse.find();

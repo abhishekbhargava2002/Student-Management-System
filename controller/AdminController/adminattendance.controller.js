@@ -81,7 +81,7 @@ const viewAttendanceById = async (req, res) => {
         message: "Id is required",
       });
     }
-    const find = await StudentAttendance.find({ studentReferId: id }).populate({
+    const find = await StudentAttendance.findOne({ studentReferId: id }).populate({
       path: "studentCourseId",
       select: "-Address -_id -studentReferId -createdAt -updatedAt -__v",
     });

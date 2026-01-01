@@ -70,7 +70,7 @@ const viewStudentById = async (req, res) => {
     if (!find) {
       return res.status(401).json({
         status: false,
-        message: "Invalid Id",
+        message: "Invalid: StudentId",
       });
     }
 
@@ -202,12 +202,6 @@ const updateStudent = async (req, res) => {
       return res.status(401).json({
         status: false,
         message: "StudentId not found",
-      });
-    }
-    if (!find) {
-      return res.status(401).json({
-        status: false,
-        message: "Invalid Id",
       });
     }
     if (name) {

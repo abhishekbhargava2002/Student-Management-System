@@ -1,7 +1,6 @@
 const Teacher = require("../../model/TeacherModel/teacher.model");
 const StudentAttendance = require("../../model/StudentModel/attendanceTable.model");
 const StudentCourse = require("../../model/StudentModel/studentcourse.model");
-const { ObjectId } = require("bson");
 
 //MANAGE ATTENDANCE
 const teacherViewAttend = async (req, res) => {

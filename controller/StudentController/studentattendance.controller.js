@@ -28,8 +28,7 @@ const attendanceMark = async (req, res) => {
         message: "Student course not found",
       });
     }
-    const findstudentRegistrationId =
-      findstudentcourseId.studentReferId.toString();
+    const findstudentRegistrationId = findstudentcourseId.studentReferId.toString();
     if (findstudentRegistrationId !== user) {
       return res.status(403).json({
         status: false,
