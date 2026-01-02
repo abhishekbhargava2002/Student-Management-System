@@ -14,7 +14,7 @@ const viewNotification = async (req, res) => {
     if (type !== "Teacher" && type !== "All") {
       return res.status(401).json({
         status: false,
-        message: "Only Teacher or All type Access only",
+        message: "Only Teacher or All type Access",
       });
     }
     const findTeacher = await Teacher.findById(teacherId);
