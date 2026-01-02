@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const studentRegistrationSchema = new mongoose.Schema({
   image: {
     type: String,
+    default:
+      "https://res.cloudinary.com/dcf03jl77/image/upload/v1767157131/StudentManagementSystem/aupyk142hm0mavtwp88i.jpg",
   },
   studentId: {
     type: String,
