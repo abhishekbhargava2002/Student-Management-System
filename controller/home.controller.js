@@ -35,6 +35,7 @@ const uploadfile = async (req, res) => {
     res.status(200).json({
       status: true,
       message: "Image Upload successfully",
+      data: find,
       url: req.file.path, // Cloudinary URL
     });
   } catch (error) {
