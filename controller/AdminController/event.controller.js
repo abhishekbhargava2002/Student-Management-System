@@ -225,7 +225,7 @@ const viewEventById = async (req, res) => {
     if (!findEvent) {
       return res.status(403).json({
         status: false,
-        message: "Id is invalid",
+        message: "EventId is invalid",
       });
     }
 
@@ -261,6 +261,13 @@ const viewEventAll = async (req, res) => {
     }
 
     const find = await Event.find();
+    if (find.length === 0) {
+      return res.status(404).json({
+        status: false,
+        message: "No data",
+        data: find,
+      });
+    }
 
     res.status(200).json({
       status: true,
@@ -302,7 +309,7 @@ const sendNotification = async (req, res) => {
     if (!message) {
       return res.status(400).json({
         status: false,
-        message: "Enter the message",
+        message: "Missing the message",
       });
     }
     const findEvent = await Event.findById(id);

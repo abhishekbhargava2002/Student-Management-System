@@ -81,7 +81,9 @@ const viewAttendanceById = async (req, res) => {
         message: "Id is required",
       });
     }
-    const find = await StudentAttendance.findOne({ studentReferId: id }).populate({
+    const find = await StudentAttendance.findOne({
+      studentReferId: id,
+    }).populate({
       path: "studentCourseId",
       select: "-Address -_id -studentReferId -createdAt -updatedAt -__v",
     });
@@ -171,6 +173,12 @@ const createAttendance = async (req, res) => {
       });
     }
     const findstudent = await StudentCourse.findOne({ studentReferId: id });
+    if (!findstudent) {
+      return res.status(403).json({
+        status: false,
+        message: "StudentId not found",
+      });
+    }
     const studentId = findstudent.studentReferId.toString();
     const courseId = findstudent._id.toString();
 
@@ -314,12 +322,14 @@ const deleteAttendanceByStudent = async (req, res) => {
         message: "Id is required",
       });
     }
-    const findstudent = await StudentAttendance.findOneAndDelete({ studentReferId: id });
-    if(!findstudent) {
+    const findstudent = await StudentAttendance.findOneAndDelete({
+      studentReferId: id,
+    });
+    if (!findstudent) {
       return res.status(401).json({
         status: false,
         message: "Student Id not found",
-      })
+      });
     }
 
     res.status(200).json({

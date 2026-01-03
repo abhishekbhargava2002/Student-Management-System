@@ -23,9 +23,14 @@ const viewNotification = async (req, res) => {
         message: "Teacher type not access",
       });
     }
-    const viewEvent = await Notification.find({ type }).populate(
-      "eventId"
-    );
+    const viewEvent = await Notification.find({ type }).populate("eventId");
+    if (viewEvent.length === 0) {
+      return res.status(404).json({
+        status: false,
+        message: "No data",
+        data: viewEvent,
+      });
+    }
 
     res.status(200).json({
       status: true,

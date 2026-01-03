@@ -3,16 +3,21 @@ const StudentCourse = require("../../model/StudentModel/studentcourse.model");
 const createCourse = async (req, res) => {
   try {
     const exist = req.user.userId;
-    const { courseId, courseName, department } =
-      req.body;
-   
-    if (!courseId || !courseName || !department) { 
+    if (!exist) {
+      return res.status(401).json({
+        status: false,
+        message: "Authication missing",
+      });
+    }
+    const { courseId, courseName, department } = req.body;
+
+    if (!courseId || !courseName || !department) {
       return res.status(400).json({
         status: false,
         message: "All field is required",
       });
     }
- 
+
     const create = await StudentCourse.create({
       studentReferId: exist,
       courseId,
@@ -26,10 +31,10 @@ const createCourse = async (req, res) => {
       data: create,
     });
   } catch (error) {
+    console.log("Error:", error);
     res.status(500).json({
       status: false,
       message: "Server error",
-      message: error.message,
     });
   }
 };
@@ -77,7 +82,9 @@ const deleteCourse = async (req, res) => {
         message: "Authication header missing",
       });
     }
-    const exist = await StudentCourse.findOneAndDelete({ studentReferId: auth });
+    const exist = await StudentCourse.findOneAndDelete({
+      studentReferId: auth,
+    });
     if (!exist) {
       return res.status(403).json({
         status: false,

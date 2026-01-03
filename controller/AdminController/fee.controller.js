@@ -3,14 +3,12 @@ const Fee = require("../../model/AdminModel/fee.model");
 const createFeeStructure = async (req, res) => {
   try {
     const adminId = req.user?.userId;
-
     if (!adminId) {
       return res.status(401).json({
         status: false,
         message: "Authentication missing",
       });
     }
-
     const {
       courseName,
       tuitionFee,

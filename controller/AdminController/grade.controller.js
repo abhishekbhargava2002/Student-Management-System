@@ -18,6 +18,13 @@ const adminViewGrade = async (req, res) => {
       });
     }
     const findAdmin = await Grade.find();
+    if (findAdmin.length === 0) {
+      return res.status(404).json({
+        status: true,
+        message: "No data",
+        data: findAdmin,
+      });
+    }
 
     await AdminMessage.create({
       adminReferId: adminId,
@@ -64,6 +71,12 @@ const adminViewGradeById = async (req, res) => {
     const findGrade = await Grade.findOne({ gradeId: id }).select(
       "-_id -createdAt -updatedAt -__v"
     );
+    if (!findGrade) {
+      return res.status(403).json({
+        status: false,
+        message: "GradeId not found",
+      });
+    }
 
     await AdminMessage.create({
       adminReferId: adminId,

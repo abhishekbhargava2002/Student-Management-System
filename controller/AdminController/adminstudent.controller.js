@@ -25,6 +25,13 @@ const viewStudentAll = async (req, res) => {
     }
 
     const find = await studentRegistration.find().select("-_id -password -__v");
+    if (find.length === 0) {
+      return res.status(204).json({
+        status: true,
+        message: "No students found",
+        data: find,
+      });
+    }
 
     res.status(200).json({
       status: true,
@@ -76,7 +83,7 @@ const viewStudentById = async (req, res) => {
 
     res.status(200).json({
       status: true,
-      message: "View the details of student by Id",
+      message: "View the details of studentId by Admin",
       data: find,
     });
   } catch (error) {
