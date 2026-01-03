@@ -1,6 +1,6 @@
 const Event = require("../../model/AdminModel/event.model");
 const Admin = require("../../model/AdminModel/admin.model");
-const StudentNotification = require("../../model/StudentModel/studentnotification.model");
+const Notification = require("../../model/AdminModel/notification.model");
 
 const createEvent = async (req, res) => {
   try {
@@ -313,7 +313,7 @@ const sendNotification = async (req, res) => {
       });
     }
 
-    await StudentNotification.create({
+    await Notification.create({
       eventId: id,
       type,
       message,
@@ -321,7 +321,7 @@ const sendNotification = async (req, res) => {
 
     res.status(200).json({
       status: true,
-      message: "Notification send to Student",
+      message: "Notification send",
       data: findEvent,
     });
   } catch (error) {

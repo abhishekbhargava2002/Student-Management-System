@@ -1,4 +1,4 @@
-const StudentNotification = require("../../model/StudentModel/studentnotification.model");
+const Notification = require("../../model/AdminModel/notification.model");
 
 const viewNotification = async (req, res) => {
   try {
@@ -23,7 +23,7 @@ const viewNotification = async (req, res) => {
         message: "Teacher type not access",
       });
     }
-    const viewEvent = await StudentNotification.find({ type }).populate(
+    const viewEvent = await Notification.find({ type }).populate(
       "eventId"
     );
 
