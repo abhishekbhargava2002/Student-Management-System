@@ -49,7 +49,7 @@ const registerEvent = async (req, res) => {
 
     res.status(200).json({
       status: true,
-      message: "Student register successfully",
+      message: "Student register for event successfully",
       data: register,
     });
   } catch (error) {

@@ -26,6 +26,13 @@ const viewTeacherAll = async (req, res) => {
     const find = await teacherRegistration
       .find()
       .select("-_id -password -createdAt -updatedAt -__v");
+    if (!find) {
+      return res.status(204).json({
+        status: true,
+        message: "No teacher found",
+        data: find,
+      });
+    }
 
     res.status(200).json({
       status: true,

@@ -17,18 +17,18 @@ const attendanceMark = async (req, res) => {
         message: "Attendance is required (Present/Absent)",
       });
     }
-    const findstudentcourseId = await studentCourse.findOne({
+    const findstudentId = await studentCourse.findOne({
       studentReferId: user,
     });
 
     // FIX: student not found
-    if (!findstudentcourseId) {
+    if (!findstudentId) {
       return res.status(404).json({
         status: false,
-        message: "Student course not found",
+        message: "StudentId not found",
       });
     }
-    const findstudentRegistrationId = findstudentcourseId.studentReferId.toString();
+    const findstudentRegistrationId = findstudentId.studentReferId.toString();
     if (findstudentRegistrationId !== user) {
       return res.status(403).json({
         status: false,
@@ -41,7 +41,7 @@ const attendanceMark = async (req, res) => {
 
     const createAttendance = await Attendance.create({
       studentReferId: user,
-      studentCourseId: findstudentcourseId._id.toString(),
+      studentCourseId: findstudentId._id.toString(),
       attendance,
     });
 

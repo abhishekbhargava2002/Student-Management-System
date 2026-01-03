@@ -54,13 +54,13 @@ const teacherViewByCourseName = async (req, res) => {
         message: "UnAuthication",
       });
     }
-    const studentFind = await Student.find({ courseName: courseName }).select(
+    const course = await Student.find({ courseName: courseName }).select(
       "-_id -createdAt -updatedAt -__v"
     );
     res.status(200).json({
       status: true,
       message: `View the detail By CourseName ${courseName}`,
-      data: studentFind,
+      data: course,
     });
   } catch (error) {
     console.log("Error: ", error);
@@ -124,7 +124,7 @@ const teacherEditByStudent = async function Edit(req, res) {
     const teacherId = req.user.userId;
     const { department } = req.body;
     if (!teacherId) {
-      return res.status(401).json({ 
+      return res.status(401).json({
         status: false,
         message: "Unauthorized",
       });
@@ -158,6 +158,12 @@ const teacherDeleteByStudent = async (req, res) => {
       });
     }
     const find = await Student.findOneAndDelete({ teacherReferId: teacherId });
+    if (!find) {
+      return res.status(403).json({
+        status: false,
+        message: "TeacherId not found",
+      });
+    }
     res.status(200).json({
       status: false,
       message: `Delete By Teacher of Id: ${teacherId}`,

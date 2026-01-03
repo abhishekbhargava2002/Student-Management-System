@@ -30,9 +30,33 @@ const createGrade = async (req, res) => {
         message: "All field are required",
       });
     }
+    if (!id) {
+      return res.status(400).json({
+        status: false,
+        message: "Id is required",
+      });
+    }
+    if (id.length !== 24) {
+      return res.status(401).json({
+        status: false,
+        message: "Id length must be 24(side)",
+      });
+    }
     //Teacher
     const findTeacher = await Teacher.findOne({ _id: teacherId });
+    if (!findTeacher) {
+      return res.status(403).json({
+        status: false,
+        message: "TeacherId not found",
+      });
+    }
     const findCourse = await Course.findOne({ studentReferId: id });
+    if (!findCourse) {
+      return res.status(403).json({
+        status: false,
+        message: "CourseId not found",
+      });
+    }
     const courseReferId = findCourse._id.toString();
     const create = await Grade.create({
       gradeId: uuidv4(),
@@ -76,6 +100,12 @@ const updateGrade = async (req, res) => {
       return res.status(403).json({
         status: false,
         message: "Access denied: Teacher only",
+      });
+    }
+    if (!id) {
+      return res.status(400).json({
+        status: false,
+        message: "Id is required",
       });
     }
     const gradefind = await Grade.findOne({ gradeId: id });
@@ -124,6 +154,12 @@ const deleteGrade = async (req, res) => {
       return res.status(403).json({
         status: false,
         message: "Access denied: Teacher only",
+      });
+    }
+    if (!id) {
+      return res.status(400).json({
+        status: false,
+        message: "Id is required",
       });
     }
     const gradefind = await Grade.findOneAndDelete({ gradeId: id });

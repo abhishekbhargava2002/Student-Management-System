@@ -13,15 +13,21 @@ const teacherViewAttend = async (req, res) => {
       });
     }
 
-    const teacherFind = await Teacher.find({ _id: teacherId });
+    const teacherFind = await Teacher.findOne({ _id: teacherId });
     if (!teacherFind) {
       return res.status(401).json({
         status: false,
-        message: "Teacher not existing",
+        message: "TeacherId not existing",
       });
     }
 
     const studentFind = await StudentAttendance.find();
+    if (studentFind.length === 0) {
+      return res.status(201).json({
+        status: true,
+        message: "Empty data",
+      });
+    }
 
     res.status(200).json({
       status: true,
@@ -48,6 +54,12 @@ const teacherViewAttendById = async (req, res) => {
       });
     }
     const studentFind = await StudentAttendance.findOne({ _id: id });
+    if (!studentFind) {
+      return res.status(403).json({
+        status: false,
+        message: "Id is invalid",
+      });
+    }
 
     res.status(200).json({
       status: true,

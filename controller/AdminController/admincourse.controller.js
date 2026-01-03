@@ -164,6 +164,12 @@ const viewCourse = async (req, res) => {
       });
     }
     const viewCourse = await StudentCourse.find();
+    if (!viewCourse) {
+      return res.status(403).json({
+        status: true,
+        message: "Empty data",
+      });
+    }
 
     await AdminNotification.create({
       adminReferId: adminId,
@@ -200,7 +206,12 @@ const viewCourseById = async (req, res) => {
       });
     }
     const studentfind = await StudentCourse.findOne({ _id: id });
-
+    if (studentfind) {
+      return res.status(403).json({
+        status: false,
+        message: "Id invalid",
+      });
+    }
     await AdminNotification.create({
       adminReferId: adminId,
       message: `Admin see the deatil by Id: ${id}`,
