@@ -1,5 +1,5 @@
-const TeacherNotificationEvent = require("../../model/StudentModel/studentnotification.model");
 const Teacher = require("../../model/TeacherModel/teacher.model");
+const Notification = require("../../model/AdminModel/notification.model");
 
 const viewNotification = async (req, res) => {
   try {
@@ -25,7 +25,7 @@ const viewNotification = async (req, res) => {
       });
     }
 
-    const findEvent = await TeacherNotificationEvent.find({ type });
+    const findEvent = await Notification.find({ type });
     if (!findEvent) {
       return res.status(403).json({
         status: false,

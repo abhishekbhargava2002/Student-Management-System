@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const StudentNotificationSchema = new mongoose.Schema(
+const NotificationSchema = new mongoose.Schema(
   {
     eventId: {
       type: mongoose.Schema.Types.ObjectId,
@@ -24,7 +24,4 @@ const StudentNotificationSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = new mongoose.model(
-  "studentnotification",
-  StudentNotificationSchema
-);
+module.exports = new mongoose.model("notification", NotificationSchema);
