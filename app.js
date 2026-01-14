@@ -2,10 +2,14 @@ require("dotenv").config(); // Load .env
 
 const express = require("express");
 const app = express();
+const http = require("http");
 const port = 3000;
-const home = require("./router/home.router");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
+const { initWebSocket } = require("./utils/socket"); // Import from socket.js
+
+//ROUTER'S
+const home = require("./router/home.router");
 const studentRegistration = require("./router/StudentRouter/registration.router");
 const studentCourseRouter = require("./router/StudentRouter/studentcourse.router");
 const studentAttendance = require("./router/StudentRouter/studentattendance.router");
@@ -47,6 +51,12 @@ async function main() {
   await mongoose.connect(process.env.MONGO_URL);
 }
 
+//WebSocket
+// Create a basic HTTP server
+const server = http.createServer(app);
+// Initialize WebSocket server
+initWebSocket(server);
+
 //Router's
 app.use("/", home);
 app.use("/student", studentRegistration);
@@ -75,6 +85,6 @@ app.use("/student", studentSendMessageRouter);
 app.use("/admin", adminReviseMessageRotuer);
 app.use("/teacher", teacherReviseMessageRouter);
 
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
