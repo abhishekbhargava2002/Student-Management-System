@@ -15,7 +15,8 @@
     "resend": "^6.6.0",
     "socket": "^1.1.56",
     "uuid": "^13.0.0",
-    "websock": "^0.3.19"
+    "websock": "^0.3.19",
+    "ws": "^8.19.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
