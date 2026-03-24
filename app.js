@@ -3,7 +3,7 @@ require("dotenv").config(); // Load .env
 const express = require("express");
 const app = express();
 const http = require("http");
-const port = 3000;
+const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const { initWebSocket } = require("./utils/socket"); // Import from socket.js

@@ -3,8 +3,8 @@ const { sendEmail } = require("../utils/mailserver");
 
 const work = async (req, res) => {
   res.status(200).json({
-    status: true,
-    message: "Server Working.........",
+    success: true,
+    message: "Server Working",
   });
 };
 
