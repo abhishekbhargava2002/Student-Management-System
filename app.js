@@ -35,7 +35,7 @@ const adminviewallPartificationRouter = require("./router/AdminRouter/partificat
 const studentSendMessageRouter = require("./router/StudentRouter/message.router");
 const adminReviseMessageRotuer = require("./router/AdminRouter/message.router");
 const teacherReviseMessageRouter = require("./router/TeacherRouter/message.router");
-
+//working
 app.use(express.json());
 app.use(cookieParser());
 
