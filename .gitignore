@@ -5,4 +5,4 @@ node_modules/
 .env
 
 # test
-test/app.test.js
+*.test.js
