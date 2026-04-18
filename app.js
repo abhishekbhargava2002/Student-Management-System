@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const { initWebSocket } = require("./utils/socket"); // Import from socket.js
-
+//work
 //ROUTER'S
 const home = require("./router/home.router");
 const studentRegistration = require("./router/StudentRouter/registration.router");
