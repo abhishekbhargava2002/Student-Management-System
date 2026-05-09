@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/admin/viewgrade/b0f36fdf-76ce-4e46-990f-283ad66ba2c6
+method: GET
+order: 8000

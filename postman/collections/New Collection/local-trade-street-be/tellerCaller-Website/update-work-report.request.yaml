@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/telecaller/work-report/update-work-report/69c623ce687d089fd7a5076e
+method: PUT
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzYyMjk1Njg3ZDA4OWZkN2E1MDczMiIsImVtYWlsIjoicmFuZG9tQGdtYWlsLmNvbSIsInJvbGUiOiJ0ZWxlY2FsbGVyIiwiaWF0IjoxNzc1NjM0NzMyLCJleHAiOjE3NzYyMzk1MzJ9.2FujDjfBOAP_p716FtjulUgbePFHlHSQ9C3yEsJiWqs
+order: 4000

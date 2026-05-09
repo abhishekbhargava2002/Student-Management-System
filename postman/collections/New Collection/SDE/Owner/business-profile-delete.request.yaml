@@ -1,0 +1,11 @@
+$kind: http-request
+url: https://vitto-technical-assessment.onrender.com/api/business-profile/69dea4d701e40548939651dc
+method: DELETE
+body:
+  type: json
+  content: "{\r
+
+    \    \"ownerName\": \"Abhishek Bhargava\"\r
+
+    }"
+order: 1000

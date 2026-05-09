@@ -1,0 +1,17 @@
+$kind: http-request
+url: https://local-trade-street-be.onrender.com/api/vendor/auth/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"ram@gmail.com\",\r
+
+    \    \"password\": \"ram@1234\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzRkNTUyZjc3MDZkOWY4MzZkNjM1YiIsImVtYWlsIjoibmlraGlscGFyYXRlQGdtYWlsLmNvbSIsImlhdCI6MTc3NDUxMTI3NSwiZXhwIjoxNzc1MTE2MDc1fQ.SD4qcMsdLuMOeRwDiSHff7R0debs-0IAx5dpH9b9EHQ
+order: 2000

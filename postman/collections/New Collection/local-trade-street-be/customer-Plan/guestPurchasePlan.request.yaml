@@ -1,0 +1,21 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/plan/69c26195f4402142683c5ae1/payment
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"planId\": \"69c4d4020993445aadb4fa40\",\r
+
+    \    \"selectedDuration\": \"30\",\r
+
+    \    \"name\": \"Rahul\", \r
+
+    \    \"phone\": \"9879879870\",\r
+
+    \    \"password\": \"123456789\"\r
+
+    \r
+
+    }"
+order: 2000

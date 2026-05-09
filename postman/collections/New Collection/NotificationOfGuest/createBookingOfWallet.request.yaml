@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:4000/api/guest/hostelServices/createBookingBywallet/6960d3d5463ff9796fbfe5c3
+method: POST
+body:
+  type: json
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTJjMzIwMjM0NGU4ZWE4YTY0YjIzZSIsInBob25lTnVtYmVyIjoiKzkxODY2ODU2OTc1OSIsIm5hbWUiOiJBa2FzaCIsImlhdCI6MTc2ODk3NjA1OCwiZXhwIjoxNzY5NTgwODU4fQ.3JmGEzP4x1Cep4PRiio7Jk4SDwykVQ072wOWjHDNqfc
+order: 3000

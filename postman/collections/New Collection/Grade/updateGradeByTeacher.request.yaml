@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/teacher/updategrade/e1dfecc4-09ba-4d89-af4e-b0b46aaf9459
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"subject\": [\"CN\",\"OS\",\"DSA\",\"DBMS\"],\r
+
+    \    \"mark\": [78,88,90,85]\r
+
+    }"
+order: 2000

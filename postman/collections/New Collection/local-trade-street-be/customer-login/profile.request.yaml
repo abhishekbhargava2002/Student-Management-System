@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/auth/profile
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjhlZGNkMjg2MTE0NzM5MmMzNWRjNCIsInBob25lIjoiNzg5NDU2MTIzNCIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3NTEwOTAxOSwiZXhwIjoxNzc1NzEzODE5fQ._3YQYGveP3RcNrtWZCAgn9sImH6pFcOE4yAedxgZ2YE
+order: 3000

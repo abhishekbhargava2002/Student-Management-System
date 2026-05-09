@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/api/vendor/auth/update-profile
+method: PUT
+body:
+  type: json
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzUyYzMwYjgwM2VkNGY5NmJhNWJhMCIsImVtYWlsIjoiYWJoaXNoZWtAZ21haWwuY29tIiwiaWF0IjoxNzc0NTI5OTQxLCJleHAiOjE3NzUxMzQ3NDF9.va1L8yY7cfhS_qoTR6YM8-jMkT4kyozJ7AkrK0ENnPE
+order: 7000

@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/revenue/dashboard
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTEzMDU2OCwiZXhwIjoxNzc1NzM1MzY4fQ.dqgAMgVkkIR-Z98yxzOKM0hpXs4qGUfJ4UDALZ5oA8M
+order: 3000

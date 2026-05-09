@@ -1,0 +1,14 @@
+$kind: http-request
+url: http://localhost:3000/api/vendor/banner/getVendorGallery
+method: GET
+body:
+  type: formdata
+  content:
+    - type: file
+      key: image
+      src: postman-cloud:///1f0ccf67-b4cd-47a0-9296-946f758d545b
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzhhY2VlYTdiNGM5NzFhYzUxZTkxZSIsImVtYWlsIjoidGVzdGluZzIyQGdtYWlsLmNvbSIsImlhdCI6MTc3NDg2MjQzMSwiZXhwIjoxNzc1NDY3MjMxfQ.t-f0ke9YhrcRetdkQmQ3jlMoMn2XHyso6xHOSgGJ8nU
+order: 13000

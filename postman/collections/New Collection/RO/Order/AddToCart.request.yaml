@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:5000/api/customer/order/add-to-cart
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"itemId\": \"690b6398c00d3aad1321fc55\", \r
+
+    \    \"itemType\": \"Product\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NWY0M2Y0MjdiODFhMTMzNzc2MGNiZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc2Nzg1MTAzOCwiZXhwIjoxNzY4NDU1ODM4fQ.fJdnmxy-u2wVEGdK8WWdnw9GVgrBekTUGqwEAxG0qco
+order: 5000

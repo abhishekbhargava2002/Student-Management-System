@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:3000/teacher/feepayment
+method: GET
+body:
+  type: text
+  content: "{\r\n    \"attend\": \"Absent\"\r\n}"
+order: 6000

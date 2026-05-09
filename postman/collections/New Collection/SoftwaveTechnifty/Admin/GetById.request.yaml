@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:8000/api/admin/get/698194994ca76fb7c880e57b
+method: GET
+body:
+  type: text
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 7000

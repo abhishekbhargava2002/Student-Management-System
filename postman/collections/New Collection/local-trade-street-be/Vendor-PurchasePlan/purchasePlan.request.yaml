@@ -1,0 +1,15 @@
+$kind: http-request
+url: https://local-trade-street-be.onrender.com/api/vendor/plan/69cfa3b1aad1b66baf06d91c/payment
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"selectedDurationId\": \"69cfa3b1aad1b66baf06d91d\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg3NDQ4MWIyZWYyMGQ3NGM4OGVjOSIsImVtYWlsIjoicmFtQGdtYWlsLmNvbSIsImlhdCI6MTc3Njg1OTIxNywiZXhwIjoxNzc3NDY0MDE3fQ.7YFlU_Q0JBGNS_MD982gAjyQixFvZT01eABp_BcI84I
+order: 1000

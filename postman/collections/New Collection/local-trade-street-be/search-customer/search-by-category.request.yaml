@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/search/category?keyword=Pest Control Service
+method: GET
+queryParams:
+  keyword: Pest Control Service
+auth:
+  type: noauth
+order: 1000

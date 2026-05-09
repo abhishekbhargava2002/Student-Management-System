@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:3000/student/registerevent/6956a7059b64bc23a4247765
+method: POST
+body:
+  type: text
+  content: "{\r
+
+    \    \"name\": \"Amit Sharma\",\r
+
+    \    \"email\": \"amit.sharma92@gmail.com\",\r
+
+    \    \"phoneNumber\": \"9876543210\",\r
+
+    \    \"password\": \"Amit@123\"\r
+
+    }"
+order: 1000

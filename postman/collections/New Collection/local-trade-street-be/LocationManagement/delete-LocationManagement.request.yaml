@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/location/delete/69c10162ee454093b24474d9
+method: DELETE
+body:
+  type: json
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDA4NDU1OCwiZXhwIjoxNzc0Njg5MzU4fQ.hXa4qRMQIpKbbJg2GNcdBbFFqncj_mTYixvUPG4xF_s
+order: 4000

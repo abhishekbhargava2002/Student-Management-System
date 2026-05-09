@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/student/vertify-otp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"jay@example.com\",\r
+
+    \    \"otp\": \"9275\"\r
+
+    }"
+order: 13000

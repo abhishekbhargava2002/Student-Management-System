@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:8000/api/admin/toggle/status/69818ce53bced2bed07afeef
+method: PATCH
+body:
+  type: text
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 8000

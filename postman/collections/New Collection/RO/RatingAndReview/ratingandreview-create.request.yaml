@@ -1,0 +1,21 @@
+$kind: http-request
+url: http://localhost:5000/api/customer/rating-review/
+method: POST
+body:
+  type: json
+  content: "{ \r
+
+    \    \"entityType\": \"vendor\",\r
+
+    \    \"entityId\": \"69088d70972e587b2c3be4e4\", \r
+
+    \    \"rating\": 4, \r
+
+    \    \"review\": \"Good service is provide\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmYyNTNjYzkzY2VkZWFmNTEyNWU5MiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3MjAxMzYzMiwiZXhwIjoxNzcyNjE4NDMyfQ.iuYbqhTWQn0KGDWMBZeVqUEWoe4KGy4qBnN_YjR3DZA
+order: 1000

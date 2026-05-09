@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:5000/api/otp/sendotp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"otpFor\": \"engineerservice\",\r
+
+    \    \"phoneNumber\": \"9639639630\"\r
+
+    }"
+auth:
+  type: noauth
+order: 1000

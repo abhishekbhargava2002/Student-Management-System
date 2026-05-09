@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/vendor/otp/verify
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"phone\": \"9876543210\",\r
+
+    \    \"otp\": \"7654\"\r
+
+    }"
+order: 6000

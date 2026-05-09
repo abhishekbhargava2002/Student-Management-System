@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/admin/logout
+method: POST
+order: 3000

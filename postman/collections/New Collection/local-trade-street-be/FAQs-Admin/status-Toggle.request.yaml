@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/faq/status/69ce41a698450a92a1b3922b
+method: PATCH
+body:
+  type: json
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTAzNDY0OCwiZXhwIjoxNzc1NjM5NDQ4fQ.qFiFsT-WblYKOKjDo6hAzB8IV-galHyX98epEkUS8pw
+order: 6000

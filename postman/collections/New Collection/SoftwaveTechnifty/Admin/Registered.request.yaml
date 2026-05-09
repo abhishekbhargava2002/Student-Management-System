@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:8000/api/admin/register
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Ayuesh\", \"email\": \"ayuesh@gmail.com\", \"phone\": \"9639639630\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 4000

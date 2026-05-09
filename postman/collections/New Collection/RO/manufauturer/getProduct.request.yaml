@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/manufacturer/product/69870d37338c254644779fcd
+method: PUT
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDM0ODNmYTc1OTQxMmQ4ZjFjZjYxZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDQ1NzExNCwiZXhwIjoxNzcxMDYxOTE0fQ.xKe6qfQB3NrtQYxOcZrkWjCnABK09__j-Sodz-bgXMY
+order: 7000

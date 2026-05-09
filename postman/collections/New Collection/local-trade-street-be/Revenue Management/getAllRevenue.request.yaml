@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/revenue/getall
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjIzOTQyNSwiZXhwIjoxNzc2ODQ0MjI1fQ.6NXIxvqGQBjn27e4tBPUAdg59IHjLe_pGki84GIumk4
+order: 1000

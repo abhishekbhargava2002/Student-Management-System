@@ -1,0 +1,14 @@
+$kind: http-request
+name: send-otp
+url: http://localhost:3030/student/send-otp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"jay@example.com\"\r
+
+    }"
+auth:
+  type: bearer
+order: 12000

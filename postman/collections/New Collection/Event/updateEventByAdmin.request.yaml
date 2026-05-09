@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/admin/updateevent/6956a70f9b64bc23a4247768
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"location\": \"NIT, Pune\",\r
+
+    \    \"capacity\": 250\r
+
+    }"
+auth:
+  type: noauth
+order: 3000

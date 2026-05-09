@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/blog/view/69809015abf7a4862c0131d9
+method: GET
+auth:
+  type: noauth
+order: 4000

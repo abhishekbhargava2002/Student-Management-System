@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/servicecategory/update/698c49aeb3178cbe718ac1a6
+method: PUT
+body:
+  type: json
+  content: "{\r\n    \"name\": \"ininin\"\r\n}"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDM0ODNmYTc1OTQxMmQ4ZjFjZjYxZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDYxMjk5MSwiZXhwIjoxNzcxMjE3NzkxfQ.IGBQzn1kGcJ5JY90Lbqd5Nx0akFLHsvNKTyCZ8wdNmk
+order: 3000

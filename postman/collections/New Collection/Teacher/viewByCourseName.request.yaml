@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/teacher/viewcoursename
+method: GET
+body:
+  type: json
+  content: "{\r
+
+    \    \"courseName\": \"MTech\"   \r
+
+    }"
+order: 4000

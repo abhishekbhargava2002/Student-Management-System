@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:8000/api/admin/delete/6980a322a40fcc8f96ee9720
+method: DELETE
+body:
+  type: text
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 5000

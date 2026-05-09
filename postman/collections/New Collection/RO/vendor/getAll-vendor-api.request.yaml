@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/vendor/6989ca3536a1590e291ebdd2
+method: DELETE
+body:
+  type: text
+  content: "{\r
+
+    \    \"mobile\": \"8516064332\", \"password\": \"test@1234\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ0YjExZTZkMDVhMDdjYTNiOWE5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDcyNjM0NSwiZXhwIjoxNzcxMzMxMTQ1fQ.XQuwHoQgURArI9GBnKLm0_moeqZbWNZZqcBo3RasdT8
+order: 1000

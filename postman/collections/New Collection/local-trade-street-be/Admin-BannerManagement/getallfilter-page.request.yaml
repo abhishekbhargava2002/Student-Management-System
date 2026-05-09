@@ -1,0 +1,14 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/bannermanagement/getallfilter?search=category&page=21
+method: GET
+queryParams:
+  search: category
+  page: "21"
+body:
+  type: formdata
+  content: []
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MzMwMDM0NywiZXhwIjoxNzczOTA1MTQ3fQ.RrY5ljWdkjOLHDhvCUu1KwtuMcgGONo_etYOkq4CxaI
+order: 11000

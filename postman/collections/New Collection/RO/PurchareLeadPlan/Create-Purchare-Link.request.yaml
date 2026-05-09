@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/vendor/leads-plans/69936350e69e447015159e00/payment
+method: POST
+auth:
+  type: bearer
+  credentials:
+    token: "{{Vendor}}"
+order: 2000

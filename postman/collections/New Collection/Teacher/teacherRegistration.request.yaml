@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:3000/teacher/registration
+method: POST
+body:
+  type: json
+  content: "{   \r
+
+    \"name\": \"Ram\",\r
+
+    \"email\":\"ram@example.com\",\r
+
+    \"password\": \"Ram@1234\",\r
+
+    \"role\":\"teacher\"\r
+
+    }"
+auth:
+  type: noauth
+order: 5000

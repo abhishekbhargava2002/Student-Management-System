@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/student/profile
+method: GET
+order: 5000

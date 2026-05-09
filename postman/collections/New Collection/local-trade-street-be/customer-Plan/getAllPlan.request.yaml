@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/plan
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDM1MzkxMiwiZXhwIjoxNzc0OTU4NzEyfQ.03hWIXV_9-kcQqjdHOGj9ZnS_XZlrJABrucA6D6ld6Y
+order: 1000

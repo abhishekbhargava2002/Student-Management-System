@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/auth/verify-otp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"admin.b@example.com\",\r
+
+    \    \"otp\": \"658286\"\r
+
+    }"
+auth:
+  type: noauth
+order: 4000

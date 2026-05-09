@@ -1,0 +1,25 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/plan/delete/69c26195f4402142683c5ae2
+method: DELETE
+body:
+  type: json
+  content: "{\r
+
+    \    \"planFeatures\": [\r
+
+    \        \"Verified Customer Enquiry\",\r
+
+    \        \"Top Listing Position\",\r
+
+    \      \"Visibility: 10X\",\r
+
+    \      \"Business Categories: 3X\"\r
+
+    \    ]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDA4NDU1OCwiZXhwIjoxNzc0Njg5MzU4fQ.hXa4qRMQIpKbbJg2GNcdBbFFqncj_mTYixvUPG4xF_s
+order: 5000

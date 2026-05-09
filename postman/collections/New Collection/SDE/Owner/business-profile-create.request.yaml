@@ -1,0 +1,17 @@
+$kind: http-request
+url: https://vitto-technical-assessment.onrender.com/api/business-profile
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"ownerName\": \"Abhishek Bhargava\",\r
+
+    \  \"panNumber\": \"ABCDE1120F\",\r
+
+    \  \"businessType\": \"retail\",\r
+
+    \  \"monthlyRevenue\": 500000\r
+
+    }"
+order: 3000

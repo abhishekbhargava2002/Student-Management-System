@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:3000/api/telecaller/auth/login
+method: POST
+body:
+  type: json
+  content: "{ \r
+
+    \    \"email\": \"random@gmail.com\",\r
+
+    \    \"password\": \"123456789\"\r
+
+    \r
+
+    }"
+auth:
+  type: noauth
+order: 1000

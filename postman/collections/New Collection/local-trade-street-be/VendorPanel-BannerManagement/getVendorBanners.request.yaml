@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/api/vendor/banner/getVendorBanners
+method: GET
+body:
+  type: formdata
+  content: []
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzhhY2VlYTdiNGM5NzFhYzUxZTkxZSIsImVtYWlsIjoidGVzdGluZzIyQGdtYWlsLmNvbSIsImlhdCI6MTc3NDg2MjQzMSwiZXhwIjoxNzc1NDY3MjMxfQ.t-f0ke9YhrcRetdkQmQ3jlMoMn2XHyso6xHOSgGJ8nU
+order: 2000

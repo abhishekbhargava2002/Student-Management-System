@@ -1,0 +1,23 @@
+$kind: http-request
+url: http://localhost:3000/admin/createevent
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"title\": \"Marathi Natya Mahotsav\",\r
+
+    \  \"date\": \"2026-02-05T17:00:00.000Z\",\r
+
+    \  \"location\": \"Balgandharva Rangmandir, Pune\",\r
+
+    \  \"description\": \"A cultural theatre festival showcasing classic and modern Marathi plays.\",\r
+
+    \  \"capacity\": 250,\r
+
+    \  \"category\": \"Drama\",\r
+
+    \  \"statusEvent\": \"Approved\"\r
+
+    }\r\n"
+order: 1000

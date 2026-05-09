@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/admin/createattendance/6946d0ebe4bfd89d262cd66c
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"attendancemark\": \"Absent\"\r
+
+    }"
+auth:
+  type: noauth
+order: 11000

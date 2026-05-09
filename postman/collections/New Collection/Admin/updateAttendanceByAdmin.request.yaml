@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:3000/admin/updateattendance/694adcad1a219000bdd56430
+method: PUT
+body:
+  type: json
+  content: "{\r\n    \"attend\": \"Absent\"\r\n}"
+order: 12000

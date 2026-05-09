@@ -1,0 +1,14 @@
+$kind: http-request
+name: studentLogin
+url: http://localhost:3030/student/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"sonal.gupta@example.com\",\r
+
+    \    \"password\": \"Sonal@1234\"\r
+
+    }"
+order: 1000

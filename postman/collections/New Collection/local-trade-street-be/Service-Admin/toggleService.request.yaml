@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/service/toggle/69d3846090ec4f185b210bcd
+method: PATCH
+body:
+  type: json
+  content: "{\r
+
+    \    \"title\": \"porn Star\",\r
+
+    \    \"description\": \"Let's do it\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTQ2OTU1MywiZXhwIjoxNzc2MDc0MzUzfQ.Mie9FdShz1VIic6--uAzlF3yqCWudy596UzdIV1FXOw
+order: 6000

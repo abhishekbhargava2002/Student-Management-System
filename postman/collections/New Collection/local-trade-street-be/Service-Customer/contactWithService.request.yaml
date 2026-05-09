@@ -1,0 +1,19 @@
+$kind: http-request
+url: https://local-trade-street-be.onrender.com/api/customer/customerservice/contact
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Aniket\",\r
+
+    \  \"email\": \"aniketnerkar123@gmail.com\",\r
+
+    \  \"phone\": \"9602996029\",\r
+
+    \  \"subject\": \"Product Inquiry - 200\",\r
+
+    \  \"message\": \"Hello, I would like to know more about Features - 200.\"\r
+
+    }"
+order: 2000

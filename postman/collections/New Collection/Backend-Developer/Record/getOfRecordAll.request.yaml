@@ -1,0 +1,12 @@
+$kind: http-request
+url: http://localhost:5000/api/records/
+method: GET
+queryParams:
+  - key: type
+    value: Income
+    disabled: true
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDIwMWRlMWNiNDI5OWIzNzIxZWYxNiIsInJvbGUiOiJWaWV3ZXIiLCJpYXQiOjE3NzUzNzIzNzgsImV4cCI6MTc3NTk3NzE3OH0._0Lk-h-1vsQ61QfqrsVVSANIKnldsSTPDOsq0Ujn0Ps
+order: 2000

@@ -1,0 +1,14 @@
+$kind: http-request
+name: sendMessageToAdmin/Teacher
+url: http://localhost:3000/student/sendmessage/693fa1c1592ab3ebce54d2f3
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"message\": \"Sturture of fee\",\r
+
+    \    \"role\": \"teacher\"\r
+
+    }"
+order: 1000

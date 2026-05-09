@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:3000/admin/deleteattendance/694adcad1a219000bdd56430
+method: DELETE
+auth:
+  type: noauth
+order: 13000

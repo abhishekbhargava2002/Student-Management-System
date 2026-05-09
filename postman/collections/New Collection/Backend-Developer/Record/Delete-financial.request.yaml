@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:5000/api/records/69d2115d2831019a8b9d053c
+method: DELETE
+body:
+  type: json
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE1ZTI0NDhhNzM4MTljNTI4OTIxZCIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTc3NTMyODgxMywiZXhwIjoxNzc1OTMzNjEzfQ.S2P-Lja4G93X0I2iS5PGqBk289gWxJfcRd1tv8qjbDY
+order: 5000

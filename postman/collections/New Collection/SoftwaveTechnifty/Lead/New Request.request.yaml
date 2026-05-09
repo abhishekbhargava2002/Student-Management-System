@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:8000/api/admin/lead/create-lead
+method: GET
+order: 3000

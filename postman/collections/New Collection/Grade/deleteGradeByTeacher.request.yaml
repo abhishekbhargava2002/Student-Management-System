@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/teacher/deletegrade/e1dfecc4-09ba-4d89-af4e-b0b46aaf9459
+method: DELETE
+order: 3000

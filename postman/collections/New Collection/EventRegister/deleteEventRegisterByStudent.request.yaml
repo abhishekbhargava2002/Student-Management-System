@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/student/deleteevent
+method: DELETE
+body:
+  type: text
+  content: "{\r
+
+    \    \"email\": \"vikas.sharma@example.com\",\r
+
+    \    \"password\": \"Vikas@123\"\r
+
+    }"
+order: 3000

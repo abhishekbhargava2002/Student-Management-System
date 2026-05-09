@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/manufacturer/orders/
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjljNzJkZDE2ZTRkN2UyZTg2NTI3OSIsInJvbGUiOiJtYW51ZmFjdHVyZXIiLCJpYXQiOjE3Njg1NDAzMzYsImV4cCI6MTc2OTE0NTEzNn0.is_iXcLTBm7TyAuIzoLh3UWVXdaFSZ95TAARRfldoSk
+order: 11000

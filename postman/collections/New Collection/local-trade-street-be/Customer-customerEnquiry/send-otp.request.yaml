@@ -1,0 +1,21 @@
+$kind: http-request
+url: https://local-trade-street-be.onrender.com/api/customer/enquiry/send-otp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Codeing\",\r
+
+    \    \"phone\": \"9874563210\",\r
+
+    \    \"enquiry\": \"Work in program\",\r
+
+    \    \"categoryId\": \"CAT-019\",\r
+
+    \    \"subcategoryId\": \"SUBCAT-294\"\r
+
+    }"
+auth:
+  type: noauth
+order: 1000

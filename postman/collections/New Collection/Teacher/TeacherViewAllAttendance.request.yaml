@@ -1,0 +1,9 @@
+$kind: http-request
+url: http://localhost:3000/teacher/viewattendanceall
+method: GET
+body:
+  type: text
+  content: "{\r\n    \"department\": \"CSE\"\r\n}"
+auth:
+  type: noauth
+order: 9000

@@ -1,0 +1,23 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/vendor/69045ad14f7b7a17d6ddc10b/items/
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: entityId
+      value: 69045ad14f7b7a17d6ddc10b
+    - type: text
+      key: entityType
+      value: vendor
+    - type: text
+      key: name
+      value: Rahul
+    - type: file
+      key: image
+      src: postman-cloud:///1f02280b-9510-4ba0-8017-3f3dad4d5215
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ0YjExZTZkMDVhMDdjYTNiOWE5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjE2OTI0MywiZXhwIjoxNzcyMTg3MjQzfQ.4FyVCEKkejY0bPs26ALu7sXu8GFCi8QBAUtfFqjT03Y
+order: 2000

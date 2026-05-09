@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/vendor/otp/send
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"phone\": \"9876543210\"\r
+
+    }"
+order: 5000

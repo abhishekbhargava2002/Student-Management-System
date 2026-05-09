@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/api/vendor/banner/updateVendorService/69c4fd5fc74ec823d165d33b
+method: PUT
+body:
+  type: json
+  content: "{\r\n    \"name\": \"Nikhil\"\r\n}"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzUxMDU1M2IxYjRkNDJjNTM1MjBmYyIsImVtYWlsIjoiYWJoaXNoZWtAZ21haWwuY29tIiwiaWF0IjoxNzc0NTIyNTI4LCJleHAiOjE3NzUxMjczMjh9.Jg8o0KMnhcZHyika-PfW4ZyNNMBj1Yj7yKodv7H59o8
+order: 10000

@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:4000/api/hostelOwner/bookings/updateBookingStatus/696f6e97e1dd24f4560db3d8
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"status\": \"Confirmed\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDNkMjk5YTZkZTBhMDBhYWUxYmQ1MSIsImlhdCI6MTc2ODkxMzI4NiwiZXhwIjoxNzY5NTE4MDg2fQ.T-KMJHXnBnpP-G1mIkAorCUyorzwpwyrBcwfPGcvtnM
+order: 7000

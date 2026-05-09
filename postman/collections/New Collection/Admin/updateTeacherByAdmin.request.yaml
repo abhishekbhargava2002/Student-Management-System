@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:3000/admin/teacher/update/6978b9f21a9168000abc30b6
+method: PUT
+body:
+  type: json
+  content: "{ \r
+
+    \    \"name\": \"Akash Singh\",\r
+
+    \    \"newPassword\": \"Akash@1234\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTQxNGY3Yzg2NGMzZjc5YjFmNGI2MjYiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Njk1MTY0MjAsImV4cCI6MTc2OTYwMjgyMH0.fHjilYdAxa54O7pl-LQzwSivVXfe3aJiZorkESqwqO4
+order: 23000

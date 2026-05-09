@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:3000/teacher/viewattendance/693bbe3ae97388ff25c920a7
+method: GET
+body:
+  type: text
+  content: "{\r\n    \"attend\": \"Absent\"\r\n}"
+order: 11000

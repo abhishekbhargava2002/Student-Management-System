@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:5000/api/vendor/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \     \"phone\": \"8516064332\",\r
+
+    \     \"password\": \"Test@1234\"\r
+
+    }"
+auth:
+  type: noauth
+order: 5000

@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/vendor/69045ad14f7b7a17d6ddc10b/items/69a0156b0e0ee6a9fbab82e
+method: DELETE
+body:
+  type: formdata
+  content:
+    - type: file
+      key: image
+      src: postman-cloud:///1f02280b-9510-4ba0-8017-3f3dad4d5215
+    - type: text
+      key: name
+      value: Ram Ji
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ0YjExZTZkMDVhMDdjYTNiOWE5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjA5MjgyMiwiZXhwIjoxNzcyMTEwODIyfQ.2cCsXsDR6-247hMp-GCEQoeUbOTndqf_FDQy_awCNOg
+order: 6000

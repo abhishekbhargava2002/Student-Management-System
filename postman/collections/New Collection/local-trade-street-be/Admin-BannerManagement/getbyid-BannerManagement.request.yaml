@@ -1,0 +1,23 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/bannermanagement/getbyid/69d887c64563b11d0fef39e1
+method: GET
+body:
+  type: formdata
+  content:
+    - type: text
+      key: state
+      value: mahar
+    - type: text
+      key: city
+      value: nagpur
+    - type: text
+      key: page
+      value: home
+    - type: file
+      key: image
+      src: postman-cloud:///1f0ccf67-b4cd-47a0-9296-946f758d545b
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTc5NzgxNywiZXhwIjoxNzc2NDAyNjE3fQ.OYKZFvlLR1AZfRVxkObz0PuBhgZn1NNdvQwidsVBmfQ
+order: 3000

@@ -1,0 +1,23 @@
+$kind: http-request
+url: https://local-trade-street-be.onrender.com/api/vendor/enqiury/update-enquiries-status
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"vendorId\": \"69ce7393a5cd03e769c08a1c\",\r
+
+    \  \"customerEnquiryId\": \"69d0e442cd8a188ce58452ac\",\r
+
+    \  \"followUpDate\": \"2026-04-08\",\r
+
+    \  \"followUpTime\": \"15:30\",\r
+
+    \  \"status\": \"Contacted\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2U3MzkzYTVjZDAzZTc2OWMwOGExYyIsImVtYWlsIjoiYWthc2h0aWtoYXQ0NEBnbWFpbC5jb20iLCJpYXQiOjE3NzUyODgwMTcsImV4cCI6MTc3NTg5MjgxN30.kazIwOXqt8WHrhyysphmkrJ63nR4hJLeJdsH8KdNy7Q
+order: 5000

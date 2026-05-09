@@ -1,0 +1,52 @@
+$kind: http-request
+url: https://local-trade-street-be.onrender.com/api/customer/vendor/create
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: Ram
+    - type: text
+      key: companyName
+      value: Ram Motro Pvt Ltd
+    - type: text
+      key: email
+      value: ram@gmail.com
+    - type: text
+      key: phone
+      value: "7744111140"
+    - type: text
+      key: password
+      value: ram@1234
+    - type: text
+      key: serviceCategory
+      value: 69d4cfd4e37927b30392ecc7
+    - type: text
+      key: serviceSubcategories
+      value: '["69d4d02fe37927b30392ecd9","69d4d052e37927b30392ece4"]'
+    - type: text
+      key: openingTime
+      value: '{"from":"09:00 AM","to":"07:00 PM"}'
+    - type: text
+      key: openingDays
+      value: '["Mon","Tue","Wed","Thu","Fri","Sat"]'
+    - type: text
+      key: businessInfo
+      value: '{"businessType":"proprietor","experience":8,"servicesOffered":["Wiring","Panel Installation","CCTV"]}'
+    - type: text
+      key: addressInfo
+      value: '{"officeAddress":"Plot No 12, MG Road","city":"Nagpur","state":"Maharashtra","pinCode":"440001","serviceRadius":25,"serviceCities":["Nagpur","Wardha","Amravati"]}'
+    - type: text
+      key: startedIn
+      value: "2016"
+    - type: text
+      key: aboutUs
+      value: Kumar Electricals provides top-quality electrical services across Nagpur and surrounding districts with 8 years of trusted experience.
+    - type: file
+      key: companyImage
+      src: postman-cloud:///1f0cd011-e60b-4100-ac13-aabe421314c9
+    - type: file
+      key: aadharFile
+      src: postman-cloud:///1f0ccf67-b4cd-47a0-9296-946f758d545b
+order: 4000

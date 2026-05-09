@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/customer/rating-review/
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmYyNTNjYzkzY2VkZWFmNTEyNWU5MiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3MjAxMzYzMiwiZXhwIjoxNzcyNjE4NDMyfQ.iuYbqhTWQn0KGDWMBZeVqUEWoe4KGy4qBnN_YjR3DZA
+order: 2000

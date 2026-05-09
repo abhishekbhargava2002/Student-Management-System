@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:8000/api/admin/auth/login/verify-otp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"phone\": \"9639639630\",\r
+
+    \    \"otp\": \"893860\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 2000

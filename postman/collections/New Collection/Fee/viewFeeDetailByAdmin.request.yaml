@@ -1,0 +1,29 @@
+$kind: http-request
+url: http://localhost:3000/admin/viewfee?course=BTech
+method: GET
+queryParams:
+  course: BTech
+body:
+  type: text
+  content: "{\r
+
+    \  \"courseName\": \"MTech\",\r
+
+    \  \"tuitionFee\": 40000,\r
+
+    \  \"examinationFee\": 2000,\r
+
+    \  \"transportFee\": 5000,\r
+
+    \  \"activityFee\": 1500,\r
+
+    \  \"libraryFee\": 800,\r
+
+    \  \"labFee\": 1200,\r
+
+    \  \"totalFee\": 49500\r
+
+    }\r\n"
+auth:
+  type: noauth
+order: 4000

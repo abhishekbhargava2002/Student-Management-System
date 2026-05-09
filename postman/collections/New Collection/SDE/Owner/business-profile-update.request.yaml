@@ -1,0 +1,11 @@
+$kind: http-request
+url: https://vitto-technical-assessment.onrender.com/api/business-profile/69dea4d701e40548939651dc
+method: PATCH
+body:
+  type: json
+  content: "{\r
+
+    \    \"monthlyRevenue\": 600000\r
+
+    }"
+order: 5000

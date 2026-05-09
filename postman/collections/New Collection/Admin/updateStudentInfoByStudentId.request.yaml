@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/admin/student/update/9c088a4d-b6fe-45e5-a2ee-bc9683f79310
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Jay Singh\",\r
+
+    \    \"phoneNumber\": \"9356793567\"\r
+
+    }"
+order: 18000

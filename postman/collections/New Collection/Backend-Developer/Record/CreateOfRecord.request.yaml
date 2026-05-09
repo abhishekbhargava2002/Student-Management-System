@@ -1,0 +1,23 @@
+$kind: http-request
+url: http://localhost:5000/api/records/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"amount\": 5000,\r
+
+    \  \"type\": \"Income\",\r
+
+    \  \"category\": \"Entertainment\",\r
+
+    \  \"date\": \"2026-04-06\",\r
+
+    \  \"note\": \"Entertainment Time\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDI0MWMzMzhmYWE5MGU1NWJlOWQwNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTc3NTM4NzkzMCwiZXhwIjoxNzc1OTkyNzMwfQ.JjItYFHRltUjdDR-jcYlk5WCCU4Mm6DtqjeHlTwxAWU
+order: 1000

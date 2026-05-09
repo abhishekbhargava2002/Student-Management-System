@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/vendor/69afefcc049d1e04095478e9
+method: DELETE
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ0YjExZTZkMDVhMDdjYTNiOWE5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MzEzODA3OCwiZXhwIjoxNzczMTU2MDc4fQ.hvD0IaJqQTywSCoLnEjChR3vpydltuobKkrbBTzCVH0
+order: 5000

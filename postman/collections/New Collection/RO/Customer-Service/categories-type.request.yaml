@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{}}/api/customer/categories"
+method: GET
+body:
+  type: urlencoded
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NWY0M2Y0MjdiODFhMTMzNzc2MGNiZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3MTIyNzk3MSwiZXhwIjoxNzcxODMyNzcxfQ.8F84IXdYyzmpSXq4fgadRVO73oBSTLYI71i7BAhTb5M
+order: 4000

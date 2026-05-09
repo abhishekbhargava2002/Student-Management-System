@@ -1,0 +1,26 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/blog/create
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: title
+      value: GYM Service
+    - type: text
+      key: author
+      value: Rahul Sharma
+    - type: text
+      key: description
+      value: "Good service "
+    - type: text
+      key: categoryId
+      value: 69b3bb175234818e589e4c81
+    - type: file
+      key: image
+      src: postman-cloud:///1f02280b-9510-4ba0-8017-3f3dad4d5215
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTgxMTY4MCwiZXhwIjoxNzc2NDE2NDgwfQ.6BXl3J4NIaLk3lK5BANJQwrGAeTSn4GPcKFvX__LU-E
+order: 1000

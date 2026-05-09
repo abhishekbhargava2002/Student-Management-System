@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/blog/update/69809015abf7a4862c0131d9
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"author\": \"Bhargava\"\r
+
+    }"
+auth:
+  type: noauth
+order: 7000

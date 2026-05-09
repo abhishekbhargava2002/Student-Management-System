@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:3000/admin/teacher/create
+method: POST
+body:
+  type: json
+  content: "{ \r
+
+    \    \"name\": \"Akash\",\r
+
+    \    \"email\": \"akash@example.com\",\r
+
+    \    \"password\": \"Akash@123\" \r
+
+    }"
+auth:
+  type: noauth
+order: 22000

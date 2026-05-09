@@ -1,0 +1,59 @@
+$kind: http-request
+url: http://localhost:3000/api/vendor/auth/update-profile
+method: PUT
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: Abhishek
+    - type: text
+      key: phone
+      value: "9876543210"
+    - type: text
+      key: password
+      value: "123456"
+    - type: text
+      key: serviceCategory
+      value: 69ae9ce5cdf97cd10e242dd7
+    - type: text
+      key: email
+      value: bhargava@mail.com
+    - type: text
+      key: openingDays
+      value: '["Mon","Tue","Wed"]'
+    - type: text
+      key: serviceSubcategories[]
+      value: 69ae9d82cdf97cd10e242dfd
+    - type: text
+      key: serviceSubcategories[]
+      value: 69ae9d82cdf97cd10e242dfd
+    - type: text
+      key: companyName
+      value: Tech
+    - type: text
+      key: addressInfo[city]
+      value: Jaipur
+    - type: text
+      key: addressInfo[state]
+      value: Rajasthan
+    - type: text
+      key: businessInfo
+      value: ' {"businessType":"individual","experience":5,"servicesOffered":["Repair","Installation"]}'
+    - type: file
+      key: companyImage
+      src: postman-cloud:///1f02280b-9510-4ba0-8017-3f3dad4d5215
+    - type: file
+      key: gstFile
+      src: postman-cloud:///1f0cd011-e60b-4100-ac13-aabe421314c9
+    - type: file
+      key: panFile
+      src: postman-cloud:///1f0ccf67-b4cd-47a0-9296-946f758d545b
+    - type: file
+      key: aadharFile
+      src: postman-cloud:///1f02280b-9510-4ba0-8017-3f3dad4d5215
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzUyYzMwYjgwM2VkNGY5NmJhNWJhMCIsImVtYWlsIjoiYWJoaXNoZWtAZ21haWwuY29tIiwiaWF0IjoxNzc0Njc0NDcwLCJleHAiOjE3NzUyNzkyNzB9.VUsVkQCnTYs9Fr_bLRqseYM3T-iCxkPuGl6iIz-ySlI
+order: 37000

@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:5000/api/vendor//getById
+method: POST
+body:
+  type: text
+  content: "{\r
+
+    \     \"phone\": \"8516064332\",\r
+
+    \     \"password\": \"test1234@\"\r
+
+    }"
+auth:
+  type: noauth
+order: 7000

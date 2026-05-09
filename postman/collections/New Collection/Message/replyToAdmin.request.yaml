@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/admin/replymessage
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"message\": \"working time\"\r
+
+    }"
+auth:
+  type: noauth
+order: 5000

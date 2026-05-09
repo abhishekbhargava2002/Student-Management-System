@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:3000/teacher/getgrade/a64c353e-914a-4b2f-b9fa-7f6dfb321453
+method: GET
+auth:
+  type: noauth
+order: 4000

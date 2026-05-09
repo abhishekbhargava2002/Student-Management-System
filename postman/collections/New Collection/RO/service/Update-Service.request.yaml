@@ -1,0 +1,20 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/newservice/update/698d771062edef557c4790ba
+method: PUT
+body:
+  type: formdata
+  content:
+    - type: text
+      key: features[]
+      value: RO-Care Service
+    - type: text
+      key: features[]
+      value: 4 Free service provide
+    - type: file
+      key: images
+      src: postman-cloud:///1f0ccf67-b4cd-47a0-9296-946f758d545b
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDM0ODNmYTc1OTQxMmQ4ZjFjZjYxZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDYzMDc3OSwiZXhwIjoxNzcxMjM1NTc5fQ.ngXhOoVOPWqgcBe9l7NmgiuauicM-BfdQ1AKvtYaOng
+order: 7000

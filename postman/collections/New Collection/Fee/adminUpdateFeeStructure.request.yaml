@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/admin/updatefee?course=MTech
+method: PUT
+queryParams:
+  course: MTech
+body:
+  type: json
+  content: "{\r\n    \"totalFee\": 49500\r\n}"
+auth:
+  type: noauth
+order: 2000

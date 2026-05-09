@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://vitto-technical-assessment.onrender.com/work
+method: GET
+order: 4000

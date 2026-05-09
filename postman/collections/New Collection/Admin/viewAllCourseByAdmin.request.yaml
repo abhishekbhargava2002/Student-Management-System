@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/admin/view
+method: GET
+body:
+  type: text
+  content: "{\r
+
+    \    \"courseId\": \"K8ZP3\",\r
+
+    \    \"courseName\": \"MTech\",\r
+
+    \    \"department\": \"Civil\"\r
+
+    }"
+order: 4000

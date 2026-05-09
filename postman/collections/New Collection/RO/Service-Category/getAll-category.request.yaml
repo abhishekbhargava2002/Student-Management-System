@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/servicecategory/viewall
+method: GET
+body:
+  type: json
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDM0ODNmYTc1OTQxMmQ4ZjFjZjYxZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDYzMDc3OSwiZXhwIjoxNzcxMjM1NTc5fQ.ngXhOoVOPWqgcBe9l7NmgiuauicM-BfdQ1AKvtYaOng
+order: 2000

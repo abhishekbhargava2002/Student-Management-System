@@ -1,0 +1,11 @@
+$kind: http-request
+url: https://softwave-technify-be.onrender.com/api/agent/send-otp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"phone\": \"9876543210\"\r
+
+    }"
+order: 2000

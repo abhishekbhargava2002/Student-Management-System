@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/keywordmanagement/update/69ba9950b78818f2864aa14e
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"keyword\": [\"keyword\", \"board\"]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MzY2NTk1MiwiZXhwIjoxNzc0MjcwNzUyfQ.96jWq88Td935D-X3kb7Ox_oj_DNmqCz79HOGXEjBleo
+order: 4000

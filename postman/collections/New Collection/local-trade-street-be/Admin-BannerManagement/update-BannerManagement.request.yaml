@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/bannermanagement/update/69d886474563b11d0fef39b4
+method: PUT
+body:
+  type: formdata
+  content:
+    - type: text
+      key: title
+      value: "TechnoKrate "
+      disabled: true
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTc5NzgxNywiZXhwIjoxNzc2NDAyNjE3fQ.OYKZFvlLR1AZfRVxkObz0PuBhgZn1NNdvQwidsVBmfQ
+order: 4000

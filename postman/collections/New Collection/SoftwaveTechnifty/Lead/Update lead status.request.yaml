@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:8000/api/admin/lead/69834075a134ffd1e44676c5/status
+method: PATCH
+body:
+  type: json
+  content: "{\r
+
+    \    \"status\": \"approved\",\r
+
+    \    \"reason\": \"working on process\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 2000

@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/vendor/toprating/69b11b6b4aefbe4f788ad7d4
+method: PATCH
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MzgzNzgxNCwiZXhwIjoxNzc0NDQyNjE0fQ.wWrtEzxwHHKJdfMcvrlDFQVwr2B3eENCr5MAwMFl6WU
+order: 9000

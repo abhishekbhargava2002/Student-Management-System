@@ -1,0 +1,33 @@
+$kind: http-request
+url: https://softwave-technify-be.onrender.com/api/agent/complete-registration
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Vikar\",\r
+
+    \  \"email\": \"vikas@gmail.com\",\r
+
+    \  \"gender\": \"male\",\r
+
+    \  \"dateOfBirth\": \"1999-08-15\",\r
+
+    \  \"pincode\": \"560037\",\r
+
+    \  \"state\": \"Karnataka\",\r
+
+    \  \"city\": \"Bengaluru\",\r
+
+    \  \"address\": \"Flat 302, Green Valley Apartments, Marathahalli\",\r
+
+    \  \"occupation\": \"DSA\",\r
+
+    \  \"userType\": \"vendor\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 1000

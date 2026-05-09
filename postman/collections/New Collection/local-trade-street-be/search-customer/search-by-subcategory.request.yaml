@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/search/subcategory?keyword=Mobile
+method: GET
+queryParams:
+  keyword: Mobile
+auth:
+  type: noauth
+order: 2000

@@ -1,0 +1,23 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/blog/create
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: image
+      src: postman-cloud:///1f0cd011-e60b-4100-ac13-aabe421314c9
+    - type: text
+      key: title
+      value: RO-CARE
+    - type: text
+      key: author
+      value: Joken
+    - type: text
+      key: description
+      value: working
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NWY0M2Y0MjdiODFhMTMzNzc2MGNiZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc2Nzg1MTAzOCwiZXhwIjoxNzY4NDU1ODM4fQ.fJdnmxy-u2wVEGdK8WWdnw9GVgrBekTUGqwEAxG0qco
+order: 3000

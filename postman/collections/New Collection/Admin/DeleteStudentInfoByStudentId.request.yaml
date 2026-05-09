@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:3000/admin/student/delete/6eb4b40e-c862-4cd6-92e9-756d62e5d1ff
+method: DELETE
+auth:
+  type: noauth
+order: 19000

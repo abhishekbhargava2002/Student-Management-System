@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:3000/teacher/deleteattendance/6949219cb7c2cd2ddf305575
+method: DELETE
+body:
+  type: text
+  content: "{\r\n    \"attend\": \"Absent\"\r\n}"
+order: 13000
