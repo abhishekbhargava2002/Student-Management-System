@@ -1,0 +1,17 @@
+$kind: http-request
+url: https://vitto-technical-assessment.onrender.com/api/loan-applications/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"profileId\": \"69de9c616596cf6e2dd2d67a\",\r
+
+    \  \"loanAmount\": 500000,\r
+
+    \  \"tenure\": 24,\r
+
+    \  \"loanPurpose\": \"working_capital\"\r
+
+    }"
+order: 1000

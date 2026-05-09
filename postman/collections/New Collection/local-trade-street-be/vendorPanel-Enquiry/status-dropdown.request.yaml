@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/vendor/enqiury/status-dropdown
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2U3MzkzYTVjZDAzZTc2OWMwOGExYyIsImVtYWlsIjoiYWthc2h0aWtoYXQ0NEBnbWFpbC5jb20iLCJpYXQiOjE3NzU2MjQwNDcsImV4cCI6MTc3NjIyODg0N30.Ophp2EOywgeQY9arITR5ny-cweVkOGIgA5WhcSi5lfo
+order: 2000

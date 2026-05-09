@@ -1,0 +1,11 @@
+$kind: http-request
+url: https://local-trade-street-be.onrender.com/api/admin/bannermanagement/getallsubcategory/69b3bb245234818e589e4c8a
+method: GET
+body:
+  type: formdata
+  content: []
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MzMwMDM0NywiZXhwIjoxNzczOTA1MTQ3fQ.RrY5ljWdkjOLHDhvCUu1KwtuMcgGONo_etYOkq4CxaI
+order: 10000

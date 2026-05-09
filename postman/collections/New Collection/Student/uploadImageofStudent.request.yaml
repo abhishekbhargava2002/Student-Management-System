@@ -1,0 +1,14 @@
+$kind: http-request
+url: http://localhost:3000/upload?image
+method: POST
+queryParams:
+  image: null
+body:
+  type: formdata
+  content:
+    - type: file
+      key: image
+      src: /C:/Users/bharg/OneDrive/Pictures/hotel/villa3.jpg
+auth:
+  type: noauth
+order: 15000

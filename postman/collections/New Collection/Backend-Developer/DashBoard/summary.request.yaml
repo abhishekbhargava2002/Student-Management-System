@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/dashboard/summary
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDI0MWMzMzhmYWE5MGU1NWJlOWQwNiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTc3NTM4NzkzMCwiZXhwIjoxNzc1OTkyNzMwfQ.JjItYFHRltUjdDR-jcYlk5WCCU4Mm6DtqjeHlTwxAWU
+order: 1000

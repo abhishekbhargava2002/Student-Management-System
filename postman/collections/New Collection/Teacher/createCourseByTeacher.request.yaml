@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:3000/teacher/createcourse
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"courseId\": \"K8ZP3\",\r
+
+    \    \"courseName\": \"BTech\",\r
+
+    \    \"department\": \"IT\"\r
+
+    }"
+auth:
+  type: noauth
+order: 3000

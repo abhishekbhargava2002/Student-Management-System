@@ -1,0 +1,14 @@
+$kind: http-request
+url: http://localhost:5000/api/customer/view-all-amc-service
+method: GET
+queryParams:
+  - key: sort
+    value: price_desc
+    disabled: true
+body:
+  type: urlencoded
+auth:
+  type: bearer
+  credentials:
+    token: "{{CustomerToken}}"
+order: 1000

@@ -1,0 +1,14 @@
+$kind: http-request
+url: http://localhost:5000/api/vendor/items/69a1667474a91de1b0bb6a01
+method: PUT
+body:
+  type: formdata
+  content:
+    - type: file
+      key: image
+      src: postman-cloud:///1f02280b-9510-4ba0-8017-3f3dad4d5215
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmY1Y2QyZjM1N2JmNDhkYzQ4Yjk0OSIsInJvbGUiOiJ2ZW5kb3IiLCJpYXQiOjE3NzIxODQyMDksImV4cCI6MTc3Mjc4OTAwOX0.Q2QvZvRHh_WtExSALzX0u6c5y9q7COXjg9Dx5z8WY9U
+order: 4000

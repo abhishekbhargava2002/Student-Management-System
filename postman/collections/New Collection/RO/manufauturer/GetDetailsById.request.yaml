@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:5000/api/manufacturer/getById
+method: GET
+body:
+  type: json
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDM0ODNmYTc1OTQxMmQ4ZjFjZjYxZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDQ1NzExNCwiZXhwIjoxNzcxMDYxOTE0fQ.xKe6qfQB3NrtQYxOcZrkWjCnABK09__j-Sodz-bgXMY
+order: 3000

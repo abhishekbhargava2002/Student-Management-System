@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/service/69897bb3336e2a04a01d7e66
+method: DELETE
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDM0ODNmYTc1OTQxMmQ4ZjFjZjYxZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDYxMjk5MSwiZXhwIjoxNzcxMjE3NzkxfQ.IGBQzn1kGcJ5JY90Lbqd5Nx0akFLHsvNKTyCZ8wdNmk
+order: 2000

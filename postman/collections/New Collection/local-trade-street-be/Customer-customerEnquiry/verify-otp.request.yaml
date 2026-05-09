@@ -1,0 +1,15 @@
+$kind: http-request
+url: https://local-trade-street-be.onrender.com/api/customer/enquiry/verify-otp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"phone\": \"9874563210\",\r
+
+    \    \"otp\": \"1654\"\r
+
+    }"
+auth:
+  type: noauth
+order: 2000

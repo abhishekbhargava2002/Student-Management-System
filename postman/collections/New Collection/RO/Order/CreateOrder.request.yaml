@@ -1,0 +1,119 @@
+$kind: http-request
+url: http://localhost:5000/api/customer/order/create
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"customer\": \"695f43f427b81a1337760cbf\",\r
+
+    \  \"items\": [\r
+
+    \    {\r
+
+    \      \"productId\": \"69049670c8a589ccfd0236c7\",\r
+
+    \      \"name\": \"Samsung Delight NXT RO+UV+MTDS Water Purifier\",\r
+
+    \      \"quantity\": 1,\r
+
+    \      \"price\": 8999,\r
+
+    \      \"discount\": 0,\r
+
+    \      \"subtotal\": 8999\r
+
+    \    }\r
+
+    \  ],\r
+
+    \  \"subtotal\": 8999,\r
+
+    \  \"taxesAndFees\": 5,\r
+
+    \  \"shippingCost\": 49,\r
+
+    \  \"plateformFess\": 0,\r
+
+    \  \"totalAmount\": 9053,\r
+
+    \  \"assignedVendorId\": \"68ff5cd2f357bf48dc48b949\",\r
+
+    \  \"assignedManufacturerId\": null,\r
+
+    \  \"shippingAddress\": {\r
+
+    \    \"fullName\": \"Durgesh Sharma\",\r
+
+    \    \"phone\": \"9876543210\",\r
+
+    \    \"addressLine1\": \"Green Park Road\",\r
+
+    \    \"city\": \"Jaipur\",\r
+
+    \    \"state\": \"Rajasthan\",\r
+
+    \    \"pincode\": \"302017\"\r
+
+    \  },\r
+
+    \  \"payment\": {\r
+
+    \    \"method\": \"upi\",\r
+
+    \    \"status\": \"captured\",\r
+
+    \    \"transactionId\": \"TXN1234567890\",\r
+
+    \    \"paidAt\": \"2025-12-18T07:53:51.506Z\"\r
+
+    \  },\r
+
+    \  \"orderStatus\": \"assigned\",\r
+
+    \  \"notes\": \"Please deliver fast.\",\r
+
+    \  \"orderId\": \"ORD-1766044431507\",\r
+
+    \  \"orderedDate\": \"2025-12-18T07:53:51.508Z\",\r
+
+    \  \"services\": [],\r
+
+    \  \"statusHistory\": [\r
+
+    \    {\r
+
+    \      \"status\": \"pending\",\r
+
+    \      \"updatedBy\": \"Customer\",\r
+
+    \      \"updatedById\": \"68ff253cc93cedeaf5125e92\",\r
+
+    \      \"note\": \"new order created by Rajesh Kuma\",\r
+
+    \      \"timestamp\": \"2025-12-18T07:53:51.508Z\"\r
+
+    \    },\r
+
+    \    {\r
+
+    \      \"status\": \"assigned\",\r
+
+    \      \"updatedBy\": \"Admin\",\r
+
+    \      \"updatedById\": \"6903483fa759412d8f1cf61e\",\r
+
+    \      \"note\": \"Order assigned to vendor\",\r
+
+    \      \"timestamp\": \"2026-01-02T07:54:51.287Z\"\r
+
+    \    }\r
+
+    \  ]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NWY0M2Y0MjdiODFhMTMzNzc2MGNiZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc2Nzg1MTAzOCwiZXhwIjoxNzY4NDU1ODM4fQ.fJdnmxy-u2wVEGdK8WWdnw9GVgrBekTUGqwEAxG0qco
+order: 2000

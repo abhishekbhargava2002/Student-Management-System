@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://vitto-technical-assessment.onrender.com/api/decision-applications/69df1dd2b3770489767f6070
+method: GET
+order: 2000

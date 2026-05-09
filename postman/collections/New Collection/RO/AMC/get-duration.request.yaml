@@ -1,0 +1,37 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/amcPlan/durations
+method: GET
+body:
+  type: text
+  content: "{\r
+
+    \  \"name\": \"Premium Website Maintenance\",\r
+
+    \  \"price\": 4999,\r
+
+    \  \"duration\": 6,\r
+
+    \  \"discount\": 15,\r
+
+    \  \"description\": \"Complete website maintenance including bug fixes, security updates, and performance optimization.\",\r
+
+    \  \"features\": [\r
+
+    \    \"Monthly backups\",\r
+
+    \    \"Security monitoring\",\r
+
+    \    \"Performance optimization\",\r
+
+    \    \"Priority support\",\r
+
+    \    \"Bug fixing\"\r
+
+    \  ]\r
+
+    }\r\n"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ0YjExZTZkMDVhMDdjYTNiOWE5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MTIxOTYwNywiZXhwIjoxNzcxMjM3NjA3fQ.EboloYTRPmUrzvx5gY6JFd69JsfhdeGUQP1iWaVH75Q
+order: 6000

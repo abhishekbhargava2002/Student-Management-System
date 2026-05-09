@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/vendor/enqiury/follow/69d0c29cdc4e3193715eb682
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2U3MzkzYTVjZDAzZTc2OWMwOGExYyIsImVtYWlsIjoiYWthc2h0aWtoYXQ0NEBnbWFpbC5jb20iLCJpYXQiOjE3NzUyOTY4OTgsImV4cCI6MTc3NTkwMTY5OH0.yaY0pY8DAX0tev5dL2xpCOt4PtHBa9A9jZpHa7tgNZw
+order: 6000

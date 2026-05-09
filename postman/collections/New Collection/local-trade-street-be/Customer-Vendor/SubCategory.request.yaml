@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/vendor/categories/69d4cfd4e37927b30392ecc7/subcategories
+method: GET
+order: 8000

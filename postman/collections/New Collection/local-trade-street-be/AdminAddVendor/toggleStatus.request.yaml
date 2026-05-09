@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/vendor/togglestatus/69d9e91ebf2c65455b4f411d
+method: PATCH
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTgwMTU5MiwiZXhwIjoxNzc2NDA2MzkyfQ.87HRsdyDeMIqzrU0YZo4SzCiZ9FNA_EkhGjnzH4moSs
+order: 5000

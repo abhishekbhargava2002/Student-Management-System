@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:3000/student/payment?courseName=BTech
+method: POST
+queryParams:
+  courseName: BTech
+body:
+  type: json
+  content: "{\r
+
+    \    \"paymentStatus\": \"Paid\",\r
+
+    \    \"paymentMode\": \"Online\",\r
+
+    \    \"paidAmount\": \"50000\"\r
+
+    }"
+order: 5000

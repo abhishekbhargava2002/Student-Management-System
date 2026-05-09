@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:4000/api/guest/getProfile
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTJjMzIwMjM0NGU4ZWE4YTY0YjIzZSIsInBob25lTnVtYmVyIjoiKzkxODY2ODU2OTc1OSIsIm5hbWUiOiJBa2FzaCIsImlhdCI6MTc2OTA2MzMyOCwiZXhwIjoxNzY5NjY4MTI4fQ.6c5phpHpyFIbh82u66S3lCchbO_M8vyiYQqHirJGe88
+order: 4000

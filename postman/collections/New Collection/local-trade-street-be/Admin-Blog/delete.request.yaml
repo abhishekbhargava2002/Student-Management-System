@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/blog/delete/69bcee1155605961ef0b54e9
+method: DELETE
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MzkxMjIwMSwiZXhwIjoxNzc0NTE3MDAxfQ.q5HMtHwnJVrNo7K7sg-JfYSouBQl6OULXflJjRw50z4
+order: 5000

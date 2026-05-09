@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:3000/admin/update/69721fa5c78750313711d354
+method: PUT
+body:
+  type: json
+  content: "{\r\n    \"department\": \"ETC\"\r\n}"
+order: 7000

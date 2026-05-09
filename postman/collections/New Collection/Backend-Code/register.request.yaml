@@ -1,0 +1,17 @@
+$kind: http-request
+url: https://event-booking-system-19h7.onrender.com/api/auth/register
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Abhishek\",\r
+
+    \  \"email\": \"test@gmail.com\",\r
+
+    \  \"password\": \"123456\",\r
+
+    \  \"role\": \"organizer\"\r
+
+    }"
+order: 1000

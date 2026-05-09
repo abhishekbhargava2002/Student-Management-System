@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/subCategory/updateSubCategorybyId/69d8909a80c40c15e70faed4
+method: PUT
+order: 4000

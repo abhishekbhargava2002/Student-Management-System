@@ -1,0 +1,20 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/subCategory/createSubCategory
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: asdffdsa
+    - type: text
+      key: categoryName
+      value: 69d78c21ff6406a37596e544
+    - type: file
+      key: image
+      src: postman-cloud:///1f0ccf67-b4cd-47a0-9296-946f758d545b
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTc5NzgxNywiZXhwIjoxNzc2NDAyNjE3fQ.OYKZFvlLR1AZfRVxkObz0PuBhgZn1NNdvQwidsVBmfQ
+order: 1000

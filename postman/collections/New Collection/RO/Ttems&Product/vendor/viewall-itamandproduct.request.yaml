@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/vendor/items/
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmY1Y2QyZjM1N2JmNDhkYzQ4Yjk0OSIsInJvbGUiOiJ2ZW5kb3IiLCJpYXQiOjE3NzIxODQyMDksImV4cCI6MTc3Mjc4OTAwOX0.Q2QvZvRHh_WtExSALzX0u6c5y9q7COXjg9Dx5z8WY9U
+order: 2000

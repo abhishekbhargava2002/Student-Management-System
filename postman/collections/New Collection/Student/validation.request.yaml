@@ -1,0 +1,21 @@
+$kind: http-request
+url: http://localhost:3000/api/valid/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"studentId\": \"65f2a3d1c2b4e6a7d8f9c123\",\r
+
+    \  \"name\": \"Abhishek\",\r
+
+    \  \"email\": \"abhishek@gmail.com\",\r
+
+    \  \"phone\": \"8765432109\",\r
+
+    \  \"password\": \"12345689\"\r
+
+    }"
+auth:
+  type: noauth
+order: 17000

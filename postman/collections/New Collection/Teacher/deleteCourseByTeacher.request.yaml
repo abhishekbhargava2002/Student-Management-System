@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:3000/teacher/deletecourse
+method: DELETE
+auth:
+  type: noauth
+order: 7000

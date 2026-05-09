@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/teacher/feepaymentbycourse/6946d0ebe4bfd89d262cd66c
+method: GET
+order: 7000

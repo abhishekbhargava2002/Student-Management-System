@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:5000/api/vendor/dummypurchareleadplan/vendor
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"leadPlanId\": \"6993138556f654ca4c38e2c5\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{Vendor}}"
+order: 1000

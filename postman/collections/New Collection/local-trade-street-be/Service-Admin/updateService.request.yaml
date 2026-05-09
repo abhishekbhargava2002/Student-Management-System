@@ -1,0 +1,14 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/service/update/69d398b4a371f5f67d2d296a
+method: PATCH
+body:
+  type: formdata
+  content:
+    - type: file
+      key: image
+      src: postman-cloud:///1f0cd011-e60b-4100-ac13-aabe421314c9
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTQ2OTU1MywiZXhwIjoxNzc2MDc0MzUzfQ.Mie9FdShz1VIic6--uAzlF3yqCWudy596UzdIV1FXOw
+order: 4000

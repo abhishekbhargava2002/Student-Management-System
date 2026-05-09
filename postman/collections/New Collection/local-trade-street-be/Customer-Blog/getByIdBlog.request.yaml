@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/blog/getbyid/CAT-001/BLOG-007
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjhlZGNkMjg2MTE0NzM5MmMzNWRjNCIsInBob25lIjoiNzg5NDU2MTIzNCIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3MzkxMTA1NCwiZXhwIjoxNzc0NTE1ODU0fQ.yZQ2s0FA5nKJGb6V060Zj0Db728Q8cq8iOrMeABvGMU
+order: 2000

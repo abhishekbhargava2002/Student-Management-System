@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/amcPlan/698ece53274be3f9b2b6b92f
+method: PUT
+body:
+  type: formdata
+  content:
+    - type: text
+      key: duration
+      value: "12"
+    - type: text
+      key: features[]
+      value: Real-Time
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ0YjExZTZkMDVhMDdjYTNiOWE5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDk1OTkxNSwiZXhwIjoxNzcxNTY0NzE1fQ.8mWULsLa7nTJsOZ8eZ6UQo_zpD-WIhEXnYhrOTCXvkQ
+order: 4000

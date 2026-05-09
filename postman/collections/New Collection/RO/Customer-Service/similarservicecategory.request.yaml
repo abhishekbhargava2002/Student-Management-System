@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/customer/6996dfbdbc8a5462de06ebb6/similar
+method: GET
+body:
+  type: urlencoded
+auth:
+  type: noauth
+order: 5000

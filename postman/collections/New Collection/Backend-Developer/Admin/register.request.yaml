@@ -1,0 +1,15 @@
+$kind: http-request
+url: https://finance-api-pcdc.onrender.com/api/admins/register
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Abhishek Bhargava\",\r
+
+    \  \"email\": \"abhishkebhargava@gmail.com\",\r
+
+    \  \"password\": \"123456789\"\r
+
+    }"
+order: 1000

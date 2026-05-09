@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/teacher/logout
+method: POST
+body:
+  type: text
+  content: "{\r
+
+    \    \"email\": \"mohit@example.com\",\r
+
+    \    \"password\": \"Mohit@123\"\r
+
+    }"
+auth:
+  type: noauth
+order: 2000

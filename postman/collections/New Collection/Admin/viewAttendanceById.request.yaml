@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/admin/viewattendance/6939bd6dfe76cff408b00069
+method: GET
+order: 9000

@@ -1,0 +1,51 @@
+$kind: http-request
+url: http://localhost:5000/api/customer/order/create/service-request
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"serviceId\": \"SRV-1023\",\r
+
+    \  \"customerContact\": \"+91-9876543210\",\r
+
+    \  \"customerAddress\": \"Flat 302, Green Valley Apartments, MG Road, Pune, Maharashtra - 411001\",\r
+
+    \  \"serviceDate\": \"2026-01-20\",\r
+
+    \  \"serviceTime\": \"10:30 AM\",\r
+
+    \  \"priority\": \"High\",\r
+
+    \  \"remarks\": \"Please arrive on time and call before reaching\",\r
+
+    \r
+
+    \  \"subtotal\": 2500,\r
+
+    \  \"platformFees\": 150,\r
+
+    \  \"taxesAndFees\": 270,\r
+
+    \  \"totalAmount\": 2920,\r
+
+    \r
+
+    \  \"payment\": {\r
+
+    \    \"method\": \"UPI\",\r
+
+    \    \"status\": \"Paid\",\r
+
+    \    \"transactionId\": \"TXN9823746521\",\r
+
+    \    \"paidAt\": \"2026-01-13T14:45:00Z\"\r
+
+    \  }\r
+
+    }\r\n"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NWY0M2Y0MjdiODFhMTMzNzc2MGNiZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc2Nzg1MTAzOCwiZXhwIjoxNzY4NDU1ODM4fQ.fJdnmxy-u2wVEGdK8WWdnw9GVgrBekTUGqwEAxG0qco
+order: 12000

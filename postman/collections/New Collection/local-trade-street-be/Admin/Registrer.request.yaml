@@ -1,0 +1,21 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/auth/register
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Super-Admin\",\r
+
+    \  \"email\": \"admin.b@example.com\",\r
+
+    \  \"mobile\": \"9639639630\",\r
+
+    \  \"password\": \"123456\",\r
+
+    \  \"role\": \"admin\"\r
+
+    }"
+auth:
+  type: noauth
+order: 1000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/subCategory/getAllCategories/69b3bb245234818e589e4c8a
+method: GET
+order: 6000

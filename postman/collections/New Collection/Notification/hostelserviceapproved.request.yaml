@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:4000/api/admin/hostel-services/updateStatus/696f0e8bf99f1a4b5f3de31a
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"status\": \"Approved\",\r
+
+    \    \"commission\": 15\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDJhNzEwOTBlNDQ4MDlmNGMyZWQzZSIsImlhdCI6MTc2ODg5MzU5MCwiZXhwIjoxNzY5NDk4MzkwfQ.OwKcBy9mmItgravU8VdjXvLT-afmu8lfDERAOxn7uZ0
+order: 4000

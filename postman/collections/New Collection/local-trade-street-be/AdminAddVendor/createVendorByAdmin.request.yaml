@@ -1,0 +1,47 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/vendor/create
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: Password-2026
+    - type: text
+      key: phone
+      value: "9876549870"
+    - type: text
+      key: password
+      value: "654321"
+    - type: text
+      key: serviceCategory
+      value: 69bbd4f8c635f76b2ea051c8
+    - type: text
+      key: email
+      value: password2026@gmail.com
+    - type: text
+      key: serviceSubcategories[]
+      value: 69bd2e01cd279d42ad0fa3db
+    - type: text
+      key: addressInfo[city]
+      value: Nagpur
+    - type: text
+      key: addressInfo[state]
+      value: Maharashtra
+    - type: file
+      key: companyImage
+      src: postman-cloud:///1f0ccf67-b4cd-47a0-9296-946f758d545b
+    - type: text
+      key: companyName
+      value: Hashing-Password-2004
+    - type: text
+      key: startedIn
+      value: "2020"
+    - type: text
+      key: aboutUs
+      value: We are working hard
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjQxMDU3MCwiZXhwIjoxNzc3MDE1MzcwfQ.stvg94jEqtdXK2G2D01myY4p9SUeA6wjRURrFIWftjk
+order: 1000

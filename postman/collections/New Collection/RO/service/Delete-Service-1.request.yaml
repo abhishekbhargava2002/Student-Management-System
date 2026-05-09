@@ -1,0 +1,12 @@
+$kind: http-request
+name: Delete-Service
+url: http://localhost:5000/api/admin/newservice/remove/6989c0c268faa775ca6b0d7c
+method: PATCH
+body:
+  type: text
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDM0ODNmYTc1OTQxMmQ4ZjFjZjYxZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDYzMDc3OSwiZXhwIjoxNzcxMjM1NTc5fQ.ngXhOoVOPWqgcBe9l7NmgiuauicM-BfdQ1AKvtYaOng
+order: 6000

@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/vendor/enqiury/enquiries
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTg3NDQ4MWIyZWYyMGQ3NGM4OGVjOSIsImVtYWlsIjoicmFtQGdtYWlsLmNvbSIsImlhdCI6MTc3Njg2MjU4MiwiZXhwIjoxNzc3NDY3MzgyfQ.f8yUcdgpRGKgHBVPB5ACijOJDcZ82B6p_UrPMgoYaWo
+order: 1000

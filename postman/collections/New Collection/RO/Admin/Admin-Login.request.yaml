@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"mobile\": \"8516064332\", \"password\": \"test@1234\"\r
+
+    }"
+order: 1000

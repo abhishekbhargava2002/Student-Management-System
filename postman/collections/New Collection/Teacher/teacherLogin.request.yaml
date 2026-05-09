@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/teacher/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"guari@example.com\",\r
+
+    \    \"password\": \"Guari@123\"\r
+
+    }"
+auth:
+  type: noauth
+order: 1000

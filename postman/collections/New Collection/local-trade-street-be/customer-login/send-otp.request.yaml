@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/auth/send-otp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Akash\",\r
+
+    \    \"phone\": \"7894561234\"\r
+
+    }"
+auth:
+  type: noauth
+order: 1000

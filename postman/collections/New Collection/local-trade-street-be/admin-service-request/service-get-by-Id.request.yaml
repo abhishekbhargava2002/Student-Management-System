@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/service-request/view/69ae9ce5cdf97cd10e242dd7
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MzEyMDg2MCwiZXhwIjoxNzczNzI1NjYwfQ.QZTsN8qQGAEUscab1dr577dLdP1eW0-6SRL5fxTki3M
+order: 2000

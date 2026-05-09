@@ -1,0 +1,23 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/faq/answer
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"title\": \"Change working \",\r
+
+    \  \"question\": \"How do I change my registered email address?\",\r
+
+    \  \"categoryId\": \"69b3bb175234818e589e4c81\",\r
+
+    \  \"city\": \"Pune\",\r
+
+    \  \"answer\": \"You can change your registered email by going to Account Settings > Profile > Edit Email. Enter the new email and verify it using OTP sent to your new email address.\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTgxMTY4MCwiZXhwIjoxNzc2NDE2NDgwfQ.6BXl3J4NIaLk3lK5BANJQwrGAeTSn4GPcKFvX__LU-E
+order: 1000

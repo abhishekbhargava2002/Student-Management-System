@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:3000/teacher/viewevent?type=All
+method: GET
+queryParams:
+  type: All
+order: 8000

@@ -1,0 +1,29 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/plan/update/69ccc8b015fefcc93ac26708
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \  \"durations\": [\r
+
+    \    {\r
+
+    \      \"duration\": 365,\r
+
+    \      \"price\": 1,\r
+
+    \      \"gst\": 0,\r
+
+    \      \"leads\": \"Unlimited\"\r
+
+    \    }     \r
+
+    \  ]\r
+
+    }\r\n"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDg2ODQ5OSwiZXhwIjoxNzc1NDczMjk5fQ.YUkbaWPJe6ugBdAABCZKkUOxebf8zgVisqPmqEfD-PA
+order: 4000

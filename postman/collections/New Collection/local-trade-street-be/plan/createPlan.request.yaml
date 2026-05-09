@@ -1,0 +1,79 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/plan/create
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"category\": \"PLAN\",\r
+
+    \  \"subCategory\": \"Gold\",\r
+
+    \  \"description\": \"Best plan for medium businesses with high visibility and lead generation\",\r
+
+    \r
+
+    \  \"durations\": [\r
+
+    \    {\r
+
+    \      \"duration\": 1,\r
+
+    \      \"price\": 1000,\r
+
+    \      \"gst\": 18,\r
+
+    \      \"leads\": 100\r
+
+    \    },\r
+
+    \    {\r
+
+    \      \"duration\": 6,\r
+
+    \      \"price\": 5000,\r
+
+    \      \"gst\": 18,\r
+
+    \      \"leads\": 300\r
+
+    \    },\r
+
+    \    {\r
+
+    \      \"duration\": 12,\r
+
+    \      \"price\": 9000,\r
+
+    \      \"gst\": 18,\r
+
+    \      \"leads\": 600\r
+
+    \    }\r
+
+    \  ],\r
+
+    \r
+
+    \  \"features\": [\r
+
+    \    \"Verified Customer Enquiry\",\r
+
+    \    \"Free Banner Advertisement Promotion\",\r
+
+    \    \"Google Optimized Business Profile\",\r
+
+    \    \"Unlimited Enquiries through SMS & Call\",\r
+
+    \    \"Premium Business Seal\",\r
+
+    \    \"Top Listing Position\"\r
+
+    \  ]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NDg2MTk3MSwiZXhwIjoxNzc1NDY2NzcxfQ.WtMVt-mj9eUKnqbD-MYJi72qOaChnCIEymzeaLCIMyc
+order: 1000

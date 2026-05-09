@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/admin/sendnotification/6956a7059b64bc23a4247765
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"type\": \"Student\",\r
+
+    \    \"message\": \"Event is related to Cultural\"\r
+
+    }"
+order: 6000

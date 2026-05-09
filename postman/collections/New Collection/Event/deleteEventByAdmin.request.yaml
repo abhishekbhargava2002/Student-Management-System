@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/admin/deleteevent/6956b364063a4f2a8ba199f8
+method: DELETE
+body:
+  type: text
+  content: "{\r
+
+    \    \"statusEvent\": \"Pending\",\r
+
+    \    \"capacity\": 300,\r
+
+    \    \"location\": \"Shivaji Mandir, Nagpur\"\r
+
+    }"
+order: 2000

@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:4000/api/hostelOwner/loginOwner
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"kuldeepsaini551@gmail.com\", \r
+
+    \    \"password\": \"kuldeepsaini\" \r
+
+    }"
+order: 1000

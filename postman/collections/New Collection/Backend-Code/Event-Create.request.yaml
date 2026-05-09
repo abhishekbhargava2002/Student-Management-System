@@ -1,0 +1,25 @@
+$kind: http-request
+url: https://event-booking-system-19h7.onrender.com/api/events/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"title\": \"Tech Conference 2026\",\r
+
+    \  \"description\": \"A large scale conference covering AI, Web Development and Cloud technologies.\",\r
+
+    \  \"date\": \"2026-06-15T10:00:00.000Z\",\r
+
+    \  \"location\": \"Mumbai\",\r
+
+    \  \"price\": 999,\r
+
+    \  \"totalSeats\": 200\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTQ4NjlkMDFiZWUzMmE5MjY1ZWFiMyIsInJvbGUiOiJvcmdhbml6ZXIiLCJpYXQiOjE3NzY1ODQzNjAsImV4cCI6MTc3NzE4OTE2MH0._sMIQ6TQZkxajaX8T-iVdCQhBtIplwU_C8eePM8HmkQ
+order: 3000

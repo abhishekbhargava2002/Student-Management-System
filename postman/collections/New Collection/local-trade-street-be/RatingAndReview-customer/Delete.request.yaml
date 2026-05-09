@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/rate-reviews/reviews/REV-015
+method: DELETE
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjhlZGNkMjg2MTE0NzM5MmMzNWRjNCIsInBob25lIjoiNzg5NDU2MTIzNCIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3Njc2NzAyNywiZXhwIjoxNzc3MzcxODI3fQ.ksUIegk321s8NcIv_FnGo7JahEZyGebLpM-XmHJVyP8
+order: 4000

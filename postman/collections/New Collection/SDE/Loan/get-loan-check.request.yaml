@@ -1,0 +1,4 @@
+$kind: http-request
+url: https://vitto-technical-assessment.onrender.com/api/loan-applications/69df1befb3770489767f606f
+method: GET
+order: 2000

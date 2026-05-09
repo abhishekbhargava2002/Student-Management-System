@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/teacher/replymessage
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"message\": \"Kya baat hai\"\r
+
+    }"
+auth:
+  type: noauth
+order: 4000

@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/keywordmanagement/create
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"categoryId\": \"69b3bb175234818e589e4c81\",\r
+
+    \    \"subCategoryId\": \"69ba0383cbdae5f56dd09a45\",\r
+
+    \    \"keyword\": [\"working\"]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTgxMTY4MCwiZXhwIjoxNzc2NDE2NDgwfQ.6BXl3J4NIaLk3lK5BANJQwrGAeTSn4GPcKFvX__LU-E
+order: 1000

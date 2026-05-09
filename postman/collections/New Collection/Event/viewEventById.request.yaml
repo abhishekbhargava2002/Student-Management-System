@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/admin/viewEvent/6956a7059b64bc23a4247765
+method: GET
+order: 5000

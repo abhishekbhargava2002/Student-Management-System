@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/vendor/banner/deletegallery/69b2659f29a23ca3ce4cb8ee
+method: DELETE
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzUxMDU1M2IxYjRkNDJjNTM1MjBmYyIsImVtYWlsIjoiYWJoaXNoZWtAZ21haWwuY29tIiwiaWF0IjoxNzc0NTIyNTI4LCJleHAiOjE3NzUxMjczMjh9.Jg8o0KMnhcZHyika-PfW4ZyNNMBj1Yj7yKodv7H59o8
+order: 16000

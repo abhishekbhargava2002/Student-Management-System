@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:3000/admin/teacher/693fa172592ab3ebce54d2ed
+method: GET
+auth:
+  type: noauth
+order: 21000

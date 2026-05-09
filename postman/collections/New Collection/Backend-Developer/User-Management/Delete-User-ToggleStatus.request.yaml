@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/users/69d201de1cb4299b3721ef16/status
+method: PATCH
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE1ZTI0NDhhNzM4MTljNTI4OTIxZCIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTc3NTM2ODI5NywiZXhwIjoxNzc1OTczMDk3fQ.wCfMlAfz1tx8_FzdySqQXGI6MZGAnu_Mq1STGG0XfGI
+order: 5000

@@ -1,0 +1,16 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/category/createCategory
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: Testing
+    - type: file
+      key: image
+      src: postman-cloud:///1f0cd011-e60b-4100-ac13-aabe421314c9
+    - type: file
+      key: icon
+      src: postman-cloud:///1f02280b-9510-4ba0-8017-3f3dad4d5215
+order: 1000

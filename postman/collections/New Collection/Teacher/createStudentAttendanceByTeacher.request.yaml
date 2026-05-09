@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/teacher/createattendance/694a27192f4ca7304f3974c8
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"attendancemark\": \"Present\"\r
+
+    }"
+order: 14000

@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/customer/productReview/691f0b1807395a8e6949caa5
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NWY0M2Y0MjdiODFhMTMzNzc2MGNiZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc2Nzg1MTAzOCwiZXhwIjoxNzY4NDU1ODM4fQ.fJdnmxy-u2wVEGdK8WWdnw9GVgrBekTUGqwEAxG0qco
+order: 11000

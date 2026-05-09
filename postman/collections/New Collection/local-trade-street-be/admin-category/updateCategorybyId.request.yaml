@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/category/updateCategorybyId/69d77a2188ebff8c25a8a08b
+method: PUT
+body:
+  type: formdata
+  content: []
+order: 4000

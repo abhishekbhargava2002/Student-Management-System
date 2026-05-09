@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/engineer/
+method: GET
+body:
+  type: json
+  content: "{\r
+
+    \    \"phone\": \"9356793567\",\r
+
+    \    \"otp\": \"333263\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDM0ODNmYTc1OTQxMmQ4ZjFjZjYxZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDM3MTc5MSwiZXhwIjoxNzcwOTc2NTkxfQ.So2t2XZhipFMA2qAObDCLylVae1AYy3mdUxnKdYoLkw
+order: 8000

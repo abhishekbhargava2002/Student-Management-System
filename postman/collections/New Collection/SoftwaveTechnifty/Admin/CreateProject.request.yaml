@@ -1,0 +1,38 @@
+$kind: http-request
+url: https://softwave-technify-be.onrender.com/api/project/admin/create
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: thumbnail
+      src: /C:/Users/bharg/Downloads/WhatsApp Image 2026-02-04 at 12.49.25 PM.jpeg
+    - type: text
+      key: projectType
+      value: 64a9b8c7d6e5f4a3b2c1d098
+    - type: text
+      key: projectName
+      value: Moblie App Development
+    - type: text
+      key: description
+      value: Mobile App Development involves designing and building high-performance, user-friendly, and secure applications for Android and iOS platforms. It includes intuitive UI/UX design, smooth navigation, offline capabilities, API integration, and strong security practices. Mobile apps are developed to be scalable and optimized for performance, ensuring fast load times, seamless user experiences, and compatibility across multiple devices.
+    - type: text
+      key: totalEarnings[amount]
+      value: "10"
+    - type: text
+      key: totalEarnings[type]
+      value: percentage
+    - type: text
+      key: price
+      value: "5000"
+    - type: text
+      key: features[]
+      value: Intuitive user interface with simple navigation
+    - type: text
+      key: features[]
+      value: Smooth performance and fast loading experience
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 9000

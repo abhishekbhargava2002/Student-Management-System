@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/vendor/viewbyid/69c222c3e69f625f0ed006e8
+method: GET
+body:
+  type: text
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWZhZDNiMTdkZmMyMzM5ZWJlZWZmNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjQxMDU3MCwiZXhwIjoxNzc3MDE1MzcwfQ.stvg94jEqtdXK2G2D01myY4p9SUeA6wjRURrFIWftjk
+order: 2000

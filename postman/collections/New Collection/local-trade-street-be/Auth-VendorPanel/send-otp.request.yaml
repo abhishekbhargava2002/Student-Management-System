@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/api/vendor/auth/send-otp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\": \"testing22@gmail.com\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzhhY2VlYTdiNGM5NzFhYzUxZTkxZSIsImVtYWlsIjoidGVzdGluZzIyQGdtYWlsLmNvbSIsImlhdCI6MTc3NDkzODA3OSwiZXhwIjoxNzc0OTM4MTk5fQ.N7iWuwwvr0E3OMH4-3csAU-twL6HZWvyzWHTBdDjDy4
+order: 3000

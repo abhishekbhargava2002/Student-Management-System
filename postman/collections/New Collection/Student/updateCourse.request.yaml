@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/student/update
+method: PUT
+body:
+  type: json
+  content: "{ \r
+
+    \    \"department\": \"CSE\" \r
+
+    }"
+auth:
+  type: noauth
+order: 6000

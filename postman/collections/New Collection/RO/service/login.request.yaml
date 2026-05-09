@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:5000/api/engineer/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"phone\": \"7709764356\",\r
+
+    \    \"password\": \"123456\"   \r
+
+    }"
+order: 1000

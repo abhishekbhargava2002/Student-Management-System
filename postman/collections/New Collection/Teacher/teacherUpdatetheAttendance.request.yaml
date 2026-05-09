@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:3000/teacher/updateattendance/693bbe3ae97388ff25c920a7
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"attendmark\": \"Present\"\r
+
+    }"
+order: 12000

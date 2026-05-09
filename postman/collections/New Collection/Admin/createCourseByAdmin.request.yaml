@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/admin/create
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"courseId\": \"K8ZP3\",\r
+
+    \    \"courseName\": \"MTech\",\r
+
+    \    \"department\": \"Civil\"\r
+
+    }"
+order: 2000

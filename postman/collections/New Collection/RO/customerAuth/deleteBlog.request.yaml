@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/blog/delete/69809015abf7a4862c0131d9
+method: DELETE
+auth:
+  type: noauth
+order: 6000

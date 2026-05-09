@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:5000/api/customer/entity/view-profile
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"entityType\": \"engineer\",\r
+
+    \    \"entityId\": \"69956a5ad6c40ea0e12202f2\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWQ5YmNjNjNlYWZkYTljZDI4OTY0NiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3MjE3NTY1NCwiZXhwIjoxNzcyNzgwNDU0fQ.XUNmiex9f003pe1A-ZMpqBNwsDRkvnc4CROtNpjJgu0
+order: 1000

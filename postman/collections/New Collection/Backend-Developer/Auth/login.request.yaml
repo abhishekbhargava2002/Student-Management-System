@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:5000/api/auth/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"raj@gmail.com\",\r
+
+    \    \"password\": \"123456\"\r
+
+    }"
+auth:
+  type: noauth
+order: 1000

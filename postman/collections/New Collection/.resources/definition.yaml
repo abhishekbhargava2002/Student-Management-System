@@ -1,0 +1,11 @@
+$kind: collection
+variables:
+  - key: "{{CustomerToken}}"
+    value: ""
+    secret: false
+  - key: "{{CustomerToken}}"
+    value: ""
+    secret: false
+  - key: Vendor
+    value: ""
+    secret: false

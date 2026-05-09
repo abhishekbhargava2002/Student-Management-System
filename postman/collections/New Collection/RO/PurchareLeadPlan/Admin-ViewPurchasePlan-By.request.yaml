@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/purchase-plans/699bf2b895986a864dd6874b
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ0YjExZTZkMDVhMDdjYTNiOWE5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MTgzNjkwOCwiZXhwIjoxNzcxODU0OTA4fQ.OS48hBfqXJnIzkoP8eCTIUxLYkhzplBb7eJW2YyEIrI
+order: 5000

@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:3000/api/customer/rate-reviews/vendors/VEN-009/reviews
+method: GET
+auth:
+  type: noauth
+order: 3000

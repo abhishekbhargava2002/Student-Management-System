@@ -1,0 +1,7 @@
+$kind: http-request
+url: https://local-trade-street-be.onrender.com/api/admin/subCategory/getAllSubCategories
+method: GET
+body:
+  type: json
+  content: ""
+order: 2000

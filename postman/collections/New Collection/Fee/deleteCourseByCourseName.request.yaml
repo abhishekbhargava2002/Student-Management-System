@@ -1,0 +1,9 @@
+$kind: http-request
+url: http://localhost:3000/admin/deletefee?course=MTech
+method: DELETE
+queryParams:
+  course: MTech
+body:
+  type: json
+  content: ""
+order: 3000

@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:8000/api/admin/update/6980a322a40fcc8f96ee9720
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"phone\": \"9609609602\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 3000

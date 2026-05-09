@@ -1,0 +1,11 @@
+$kind: http-request
+url: https://vitto-technical-assessment.onrender.com/api/decision-applications/
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"applicationId\": \"69df1befb3770489767f606f\"\r
+
+    }"
+order: 1000

@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:5000/api/manufacturer/register
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Rahul\",\r
+
+    \    \"phone\": \"9356792567\",\r
+
+    \    \"password\": \"123654789\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NWY0M2Y0MjdiODFhMTMzNzc2MGNiZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc2Nzg1MTAzOCwiZXhwIjoxNzY4NDU1ODM4fQ.fJdnmxy-u2wVEGdK8WWdnw9GVgrBekTUGqwEAxG0qco
+order: 1000

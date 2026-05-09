@@ -1,0 +1,25 @@
+$kind: http-request
+url: https://softwave-technify-be.onrender.com/api/admin/lead/create-lead
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"productId\":\"6982f7aa28c3e3d5daaafd75\",\r
+
+    \    \"agentId\":\"6982db522cb47d5850ab71b0\",\r
+
+    \    \"name\":\"hitesh\",\r
+
+    \    \"email\":\"hitesh126@gmail.com\",\r
+
+    \    \"phone\":\"9354648278\",\r
+
+    \    \"leaddetails\":\"I want to be something jhd nhvdjmcndknmk\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 1000

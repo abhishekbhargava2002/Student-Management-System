@@ -1,0 +1,10 @@
+$kind: http-request
+url: http://localhost:5000/api/customer/view-amc-service/698ac93edee2e88204096ca1
+method: GET
+body:
+  type: urlencoded
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZmYyNTNjYzkzY2VkZWFmNTEyNWU5MiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc3MDcwMjA0MiwiZXhwIjoxNzcxMzA2ODQyfQ.0zkbLaFKrJqoXtvqZlL0hKRhCOz3g-sU09_CRrl75-E
+order: 2000

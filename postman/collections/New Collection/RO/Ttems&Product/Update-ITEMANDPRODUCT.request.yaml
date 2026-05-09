@@ -1,0 +1,14 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/vendor/69045ad14f7b7a17d6ddc10b/items/69a02741e004c4bf12a5ec63
+method: PUT
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: Akash
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ0YjExZTZkMDVhMDdjYTNiOWE5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjA5MjgyMiwiZXhwIjoxNzcyMTEwODIyfQ.2cCsXsDR6-247hMp-GCEQoeUbOTndqf_FDQy_awCNOg
+order: 5000

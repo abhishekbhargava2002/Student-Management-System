@@ -1,0 +1,11 @@
+$kind: http-request
+url: http://localhost:5000/api/admin/newservice/view
+method: GET
+body:
+  type: text
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ0YjExZTZkMDVhMDdjYTNiOWE5YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MTQ4MjQyNCwiZXhwIjoxNzcxNTAwNDI0fQ.Y8xPUPvZNjXA5pUqnY6S1B_d6RxQeW74Rb9kBHi8k4M
+order: 4000

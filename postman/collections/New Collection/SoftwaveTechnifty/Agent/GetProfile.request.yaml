@@ -1,0 +1,8 @@
+$kind: http-request
+url: https://softwave-technify-be.onrender.com/api/agent/profile
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{Token}}"
+order: 4000

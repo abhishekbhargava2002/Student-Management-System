@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3000/api/admin/category/getCategorybyId/69d77a2188ebff8c25a8a08b
+method: GET
+order: 3000
