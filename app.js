@@ -61,6 +61,9 @@ app.post("/test", (req, res) => {
   res.send("Hello World");
 });
 
+app.get("/test", (req, res) => {
+  res.send("Hello World");
+});
 
 //Router's
 app.use("/", home);
