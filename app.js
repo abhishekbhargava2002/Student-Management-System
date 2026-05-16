@@ -57,6 +57,11 @@ const server = http.createServer(app);
 // Initialize WebSocket server
 initWebSocket(server);
 
+app.post("/test", (req, res) => {
+  res.send("Hello World");
+});
+
+
 //Router's
 app.use("/", home);
 app.use("/student", studentRegistration);
